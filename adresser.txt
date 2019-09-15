@@ -1,63 +1,63 @@
-81547900	tid kvar, går ej att ändra?
+81547900 time left, can't be changed?
 
 
 
-800b3b60	tiden ändras i denna adress! körs en gång per sekund!
-		läses oftast vid 800e3b38, IBLAND vid 80159c0c, ibland 800cdea0, 
+800b3b60 time is changing at this address! runs once per second!
+is usually read at 800e3b38, IBLAND at 80159c0c, sometimes 800cdea0,
 
-80429fa0	poäng PAL, kan sättas!
-81547908	poäng PAL
+80429fa0 points PAL, can be set!
+81547908 points PAL
 
 
-80d25bf8	tid!!! kan sättas! 4096 (0x1000) per sekund!
+80d25bf8 time !!! can be set! 4096 (0x1000) per second!
 
-00354e93	liv
+00354e93 life
 
-00354e90	liv
-003fc95c	liv
-015478ec	liv
+00354e90 life
+003fc95c life
+015478ec life
 
-spring:
-01201030	acc?
-01201050	acc?
-0154b8c8	visar + åt höger
-0154b8ec	visar + åt höger
-0154b910	visar + åt höger, räcker med att ändra denna! YEAH!!!
-0154ba1c	visar + åt höger
-0154c83c	visar - åt höger
-0154c854	visar + i hast åt höger, -1.5 - 1.5 utan knapp 1, -3 - 3 med knapp 1
-0154cca8	1/0 springer/inte springer
+running:
+01201030 ACC?
+01201050 ACC?
+0154b8c8 shows + to the right
+0154b8ec shows + to the right
+0154b910 shows + to the right, enough to change this! YEAH !!!
+0154ba1c shows + to the right
+0154c83c shows - to the right
+0154c854 shows + in hurry to the right, -1.5 - 1.5 without button 1, -3 - 3 with button 1
+0154cca8 1/0 running / not running
 
 
 8043fbd4
-80433360-0x5488= 8042ded8
+80433360-0x5488 = 8042ded8
 
-SPRING-VÄRDE I CODE:
+SPRING VALUE IN CODE:
 8015f61c
 
 
-00354ea0	mynt, kan ändras
+00354ea0 coins, subject to change
 
 40245A00
 
-HOPP:
-00405304	00000004 när man är i luften
-0154b8cc	+-4 upp/ner, hastighet i luften, går ej att ändra
-0154ba20	+-4
-0154c6bc	00010000 när man är i luften
-0154c840	-+4 upp/ner
-015e36cc	nåt höjdvärde typ, -64 - +64?
+HOPE:
+00405304 00000004 when in the air
+0154b8cc + -4 up / down, speed in the air, cannot be changed
+0154ba20 + -4
+0154c6bc 00010000 when in the air
+0154c840 - + 4 up / down
+015e36cc some height value type, -64 - +64?
 
 
-eld:
-00375540	# av eldbollar
-00375550	# av eldbollar, går att ändra!!
+Fire:
+00375540 # of fireballs
+00375550 # of fireballs, can be changed !!
 
-PAL-eld?
+PAL fire?
 80375840
 80375850
 
-ADRESS I MINNET FÖR ELD:
+ADDRESS IN THE MEMORY OF PARENT:
 80040984
 
 
@@ -66,7 +66,7 @@ is:
 00375ab8
 011fe030
 
-hålla in 1-knappen?
+holding down the 1 button?
 0x8039f6a0
 0x8039f700
 0x8039f760
@@ -74,33 +74,33 @@ hålla in 1-knappen?
 etc...
 
 
-8554cd48	fysisk storlek på mario, 3f800000 = 1, 40000000 = 2 etc
-8042BB54	samma, bättre
+8554cd48 physical size of mario, 3f800000 = 1, 40000000 = 2 etc
+8042BB54 same, better
 
-8154cce4	storlek på mario, eldmario etc alltså! 0=liten, 1=stor, 2=eld, 4 = snurr, 6=is, 5=pingvin,3=mini 
-815dbb74-815dbb8c	antal powerups! allihopa!
-
-
-0154c858	hastighet i y?
-8154b8f0, kolla minnesbrytpunkt!
-8154b8ec, kolla minnesbrytpunkt!
+8154cce4 size of mario, fire mario etc so! 0 = small, 1 = large, 2 = fire, 4 = spinning, 6 = ice, 5 = penguin, 3 = mini
+815dbb74-815dbb8c number of powerups! everyone!
 
 
-körs WRITE vid 80057154
-kors READ vid aldrig
+0154c858 speed in y?
+8154b8f0, check memory breakpoint!
+8154b8ec, check memory breakpoint!
+
+
+runs WRITE at 80057154
+cross READ never know
 
 8154b804?
-8154b804+0xec = 8154b8f0	hastighet i y, kan ändras!
-detta storeande sker i 80057150
-8154b918	hopphastighet uppåt?		114
-8154b8b4	läge i y-led, kan ändras!	b0
-8154b8b0	läge i x-led, kan ändras!	ac
-8154c8d0	-				10cc
-8154c858	också hopphastighet		1054
+8154b804 + 0xec = 8154b8f0 speed in y, can be changed!
+this big thing happens in 80057150
+8154b918 jump speed up? 114
+8154b8b4 position in y-direction, can be changed! b0
+8154b8b0 x-led position, subject to change! ac
+8154c8d0 - 10cc
+8154c858 also jump rate 1054
 
 8154b9f0
 
-8042bba0???	grav??
+8042bba0 ??? grave??
 800573f0?
 8043fd38?
 
@@ -109,37 +109,37 @@ detta storeande sker i 80057150
 8042e780
 
 
-80237d90	fsubs f1,f1,f0
+80237d90 fsubs f1, f1, f0
 
 
 0x802f77ac
 0x802f77a4
 
-80237d80	viktig funktion? körs vid 80057570
+80237d80 important function? runs at 80057570
 
 
 
-804055d8	innehåller adressen? 80405618 när man är i luften	
-80405604	4 i luften, 0 annars
-811fdf00	luftgrej? testa brp!
-81200868	luftgrej? nja
-8154c6bc	luftgrej?
+804055d8 contains the address? 80405618 when in the air
+80405604 4 in the air, 0 otherwise
+811fdf00 air thing? test brp!
+81200868 air thing? Well
+8154c6bc air thing?
 
 
-0x8154b804+0xac = 8154b8b0
-0x8154b804+0xe8 = 8154b8ec
+0x8154b804 + 0xac = 8154b8b0
+0x8154b804 + 0xe8 = 8154b8ec
 8154b8f0?
-0x8154b804+0xf0 = 8154b8f4
+0x8154b804 + 0xf0 = 8154b8f4
 0x800570f8?
-0x800570f8+0x2c=80057124
-0x800570f8+0x28=80057120
-0x800570f8+0x30=80057128
-0x800570f8+0x10=80057108
-0x800570f8+0x14=8005710C
-0x800570f8+0x18=80057110
+0x800570f8 + 0x2c = 80057124
+0x800570f8 + 0x28 = 80057120
+0x800570f8 + 0x30 = 80057128
+0x800570f8 + 0x10 = 80057108
+0x800570f8 + 0x14 = 8005710C
+0x800570f8 + 0x18 = 80057110
 
-0x800570f8+0x14=8005710C
-0x800570f8+0x18=80057110
+0x800570f8 + 0x14 = 8005710C
+0x800570f8 + 0x18 = 80057110
 
 
 
@@ -147,104 +147,104 @@ detta storeande sker i 80057150
 800574cc
 
 802f77a0
-802f77a0+c
-802f77a0+4
+802f77a0 + c
+802f77a0 + 4
 
-80433360-0x77c0=8042bba0
-
-
-8043fc98+0x70=8043fd08
-
-802f77a4	nånting bra? händer vid 80237dc8
-802f77ac	nånting bra?
+80433360-0x77c0 = 8042bba0
 
 
-händer bra saker RUNT 800575f0
+8043fc98 + 0x70 = 8043fd08
 
-8043fc98+0x1c=8043fcb4
-
-8043fd38+0x4=8043fd3c händer vid 80057550
-
-0x8154b804+0xec=8154b8f0
+802f77a4 something good? happens at 80237dc8
+802f77ac something good?
 
 
-8042bbb4	stjärtdunkhastighet!!
-8042bb44	max fallhastighet!! sätt minus så flyger man upp i taket!
-80936034	pi ~= 3.141593
+good things happen around 800575f0
 
-säkert någon i närheten som är gravitation?
+8043fc98 + 0x1C = 8043fcb4
 
-8154e27c	håller i skalet => =0000040E, 0 annars
+8043fd38 + 0x4 = 8043fd3c happens at 80057550
 
-8154bb90	0=>skadas ej, 01000000=>skadas, 1=>faller genom jorden och dör, 10=>mimare, 
-8154cd68	1=>sitter på yoshi, 0 annars?
-
-8154cc7c	innehåller olika adresser, hoppar, sitter på yoshi, står etc
-8154cc94	803765b0 på yoshi, 80375f2c på marken, 8035459c i luften, 8035455c mark,
-8154cc9c	80375f6c hoppar av yoshi
-
-8154cc7c	sätts till 803765b0 => mario hoppar! kan hoppa i luften då!
-		80375fac faller?
-		8035459c hoppar?
-		8037612c stjärtdunk
-		8037602c duckar
-		8035461c avbruten stjärtdunk
+0x8154b804 + 0xec = 8154b8f0
 
 
-8154b9e0	har c41436f4 då ej yoshi, c4141f3c då på yoshi
-8154c828	olika värden beroende på om på yoshi, hoppar, står still, 
+8042bbb4 tail feather speed !!
+8042bb44 max fall speed !! way minus you fly up to the ceiling!
+80936034 pi ~ = 3.141593
+
+surely someone nearby who is gravitating?
+
+8154e27c holds in shell => = 0000040E, 0 otherwise
+
+8154bb90 0 => not damaged, 01000000 => damaged, 1 => falls through the earth and dies, 10 => mimes,
+8154cd68 1 => sitting on yoshi, 0 otherwise?
+
+8154cc7c contains different addresses, jumps, sits on yoshi, stands etc
+8154cc94 803765b0 on yoshi, 80375f2c in the field, 8035459c in the air, 8035455c land,
+8154cc9c 80375f6c jumps by yoshi
+
+8154cc7c is set to 803765b0 => mario jumps! can jump in the air then!
+80375fac fall?
+8035459c jumping?
+8037612c tailpipe
+8037602c dolls
+8035461c interrupted tail can
 
 
-8043fd2c	1c8 då mat i munnen? 1 då hammare? neee va?
+8154b9e0 has c41436f4 then not yoshi, c4141f3c then on yoshi
+8154c828 different values â€‹â€‹depending on whether on yoshi, jumps, stands still,
 
 
-803551e4	1=slut på bana, 0=ej slut
-80355220	-||-
-
-80d250a8	ban-ID? yey!!
-80405eac	nåt liknande?
-
-måste hitta register för värld också!
-00439c14	kan vara värld
-00d25408	värld!!
+8043fd2c 1c8 then food in the mouth? 1 then hammer? no huh?
 
 
+803551e4 1 = end of runway, 0 = not end
+80355220 - || -
 
-!!!!!!TIMERGREJ!!!!!!!
+80d250a8 ban ID? yey !!
+80405eac something similar?
+
+must find registers for world too!
+00439c14 can be world
+00d25408 world !!
+
+
+
+!!!!!! TIMER JIGGER !!!!!!!
 
 orig:
-800b3b60	9421ffd0
+800b3b60 9421ffd0
 
 
-800b3b60	49E4C4A0 	;b 0x1e4c4a0
-		48B1C420	;b ...
+800b3b60 49E4C4A0; b 0x1e4c4a0
+48B1C420; b ...
 
-80bcff80	9421ffd0	;stwu r1,-48(r1) 		;origvärde
-      84	39E00000	;li r15,0
-      88	3E0081F0	;lis r16, 0x81f0
-      8c	3E2080D2	;lis r17, 0x80d2		;läs in världadressen
-      90	3A315408 	;addi r17,r17,0x5408		;läs in världadressen del 2
-      94	82510000	;lwz r18, 0 (r17)		;r18 = värld
-      98	3E2080D2	;lis r17, 0x80d2		;läs in banID
-      9c	3A3150A8	;addi r17,r17,0x50a8		;läs in banID del 2
-      a0	82310000	;lwz r17,0(r17)			;läs in banID till r17
-      a4	3A60000c	;li r19, 12			;shifta såhär mycket
-      a8	7E529830	;slw r18,r18,r19		;shifta!
-      ac	7E109378	;or r16,r16,r18			;r16=0x81fxx000, xx=värld
-      b0	3A600004	;li r19, 4			;shifta även denna
-      b4	7E319830	;slw r17,r17,r19
-      b8	7E108B78	;or r16,r16,r17			;r16=0x81fxxyy0, yy=bana
-      bc	82300000	;lwz r17, 0(r16)
-      c0	3A310001	;addi r17,r17,1			;tiden går!!!
-      c4	92300000	;stw r17, 0(r16)
+80bcff80 9421ffd0; stwu r1, -48 (r1); original value
+      84 39E00000; li r15.0
+      88 3E0081F0; lis r16, 0x81f0
+      8c 3E2080D2; lis r17, 0x80d2; enter the world address
+      90 3A315408; addi r17, r17,0x5408; enter world address part 2
+      94 82510000; lwz r18, 0 (r17); r18 = world
+      98 3E2080D2; lis r17, 0x80d2; load banID
+      9c 3A3150A8; add r17, r17.0x50a8; read banID part 2
+      a0 82310000; lwz r17.0 (r17); load banID to r17
+      a4 3A60000c; li r19, 12; shift so much
+      a8 7E529830; slw r18, r18, r19; shifta!
+      ac 7E109378; or r16, r16, r18; r16 = 0x81fxx000, xx = world
+      b0 3A600004; li r19, 4; also shift this
+      b4 7E319830; slw r17, r17, r19
+      b8 7E108B78; or r16, r16, r17; r16 = 0x81fxxyy0, yy = path
+      bc 82300000; lwz r17, 0 (r16)
+      c0 3A310001; addi r17, r17,1; time passes !!!
+      c4 92300000; stw r17, 0 (r16)
 
-      c8	3E0080D2	;lis r16,0x80d2			;halva tid
-      d0	3A105BF8	;addi r16,r16,0x5bf8		;tids-adress, 80d25bf8
-      d4	3A60000c	;li r19, 12			;tiden ska shiftas 12 steg
-      d8	7E319830	;slw r17,r17,r19		;shifta 12 steg åt vänster!
-      dc	92300000	;stw r17,0(r16)			;ladda in tiden i poäng
+      c8 3E0080D2; lis r16.0x80d2; half time
+      d0 3A105BF8; addi r16, r16.0x5bf8; time address, 80d25bf8
+      d4 3A60000c; li r19, 12; time should be shifted 12 steps
+      d8 7E319830; slw r17, r17, r19; shift 12 steps to the left!
+      dc 92300000; stw r17.0 (r16); load time in points
 
-      e0	4B4E3B84	;b -0xb1c47c			;go back to orig
+      e0 4B4E3B84; b -0xb1c47c; go back to orig
 
 
 
@@ -252,242 +252,242 @@ orig:
 9421ffd039E000003E0081F03E2080D23A315408825100003E2080D23A3150A8823100003A60000c7E5298307E1093783A6000047E3198307E108B78823000003A310001923000003E0080D23A105BF83A60000c7E319830923000004B4E3B84
 
 
-<memory offset="0x800b3b60" value="48B1C420" />
-<memory offset="0x80bcff80" value="9421ffd039E000003E0081F03E2080D23A315408825100003E2080D23A3150A8823100003A60000c7E5298307E1093783A6000047E3198307E108B78823000003A310001923000003E0080D23A105BF83A60000c7E319830923000004B4E3B84" />
+<memory offset = "0x800b3b60" value = "48B1C420" />
+<memory offset = "0x80bcff80" value = "9421ffd039E000003E0081F03E2080D23A315408825100003E2080D23A3150A8823100003A60000c7E5298307E1093783A6000047E3198307E108B78823000003A008E008E008E008E008E008A00AA
 
 
-!!!!!!!!!!gravity-letande!!!!!!!!!!
+!!!!!!!!!! gravity-searching !!!!!!!!!!
 float x_speed_inc
-float y_speed_inc	kan vara något? adress???
-HandleYSpeed()
-class dEn_c		bra skit?
+float y_speed_inc can be something? address???
+HandleYSpeed â€‹â€‹()
+class dEn_c good shit?
 
 
-0x80163920		setspeed, frame?
-8006cde0		handle y speed, handlar bara om fiender verkar det som
-8006cd90		handle x speed
-8006CD40		UpdateObjectPosBasedOnSpeedValues_real
+0x80163920 setspeed, frame?
+8006cde0 handle y speed, is all about enemies it seems
+8006cd90 handle x speed
+8006CD40 UpdateObjectPosBasedOnSpeedValues_real
 
-8006ce00		storea gravitation?? be400000 = -0.187500, rimligt?
+8006ce00 storea gravity ?? be400000 = -0.187500, reasonable?
 
-81541414		gravitation för EN goomba, hmm
+81541414 gravity for EN goomba, hmm
 
-8042bb28		hopp-hastighet för mario!
-
-
-ENKLARE POÄNGFIELDÄNDRARTEST, sätt till 0 hela tiden:
-
-800b3b60	48b1c420
-
-80bcff80	9421ffd0
-		3de00000
-		3e000042
-		3a104fd0
-		3a104fd0
-		91f00000
-		4b4e3bcc
+8042bb28 jump speed for mario!
 
 
-<memory offset="0x800b3b60" value="48b1c420" />
-<memory offset="0x80bcff80" value="9421ffd03de000003e0000423a104fd03a104fd091f000004b4e3bcc" />
+SIMPLE POINGE FIELD CHANGE TEST, set to 0 all the time:
+
+800b3b60 48b1c420
+
+80bcff80 9421ffd0
+3de00000
+3e000042
+3a104fd0
+3a104fd0
+91f00000
+4b4e3bcc
 
 
-pröva att hoppa till adress 802f6710 istället? funkar ju för minus-patchen!
+<memory offset = "0x800b3b60" value = "48b1c420" />
+<memory offset = "0x80bcff80" value = "9421ffd03de000003e0000423a104fd03a104fd091f000004b4e3bcc" />
 
 
-800e3b38	48212BD8
-
-802f6710	80010014
-802f6714	3de00000
-802f6718	3e000042
-802f671c	3a104fd0
-802f6720	3a104fd0
-802f6724	91f00000
-802f6728	4BDED414
+try jumping to address 802f6710 instead? works for the minus patch!
 
 
+800e3b38 48212BD8
 
-<memory offset="0x800e3b38" value="48212bd8" />
-<memory offset="0x802f6710" value="800100143de000003e0000423a104fd03a104fd091f000004BDED414" />
-
-
-pröva att bara köra nop och hoppa tillbaka: FUNKAR!
-
-
-800e3b38	48212BD8
-
-802f6710	80010014
-802f6714	60000000
-802f6718	60000000
-802f671c	60000000
-802f6720	60000000
-802f6724	60000000
-802f6728	4BDED414
+802f6710 80010014
+802f6714 3de00000
+802f6718 3e000042
+802f671c 3a104fd0
+802f6720 3a104fd0
+802f6724 91f00000
+802f6728 4BDED414
 
 
 
-<memory offset="0x800e3b38" value="48212bd8" />
-<memory offset="0x802f6710" value="8001001460000000600000006000000060000000600000004BDED414" />
+<memory offset = "0x800e3b38" value = "48212bd8" />
+<memory offset = "0x802f6710" value = "800100143de000003e0000423a104fd03a104fd091f000004BDED414" />
 
 
-spara registren på stacken, använd dom, lägg tillbaka dom!!
-FUNKAR, ADRESSERA ALLTID 0x8yyyyyyy!!!!!!!!!!
-
-800e3b38	48212BD8 ;b 0x802f6710
-
-802f6710	80010014 ;lwz r0,20(r1)
-		94A1FFFC ;stwu r5, -0x4(sp)
-		94C1fffc ;stwu r6, -0x4(sp)
-		3ca00000 ;lis r5, 0
-		3CC08042 ;lis r6, 0x8042	!!!!!!!!!!
-		38C64FD0 ;addi r6,r6, 0x4fd0
-		38C64FD0 ;addi r6,r6, 0x4fd0
-		90A60000 ;stw r5, 0(r6)
-		84c10000 ;lwzu r6, 0(sp)
-		84a10004 ;lwzu r5, 4(sp)
-		38210004 ;addi r1,r1,0x4
-		4BDED400 ;b back
-		
-		
-
-<memory offset="0x800e3b38" value="48212bd8" />
-<memory offset="0x802f6710" value="8001001494A1FFFC94C1fffc3ca000003CC0804238C64FD038C64FD090A6000084c1000084a10004382100044BDED400" />
+just try to run nope and jump back: FUN!
 
 
-prova att öka på 1 på poängfältet varje gång:
-FUNKAR!!! körs x antal ggr per sekund, x=?
+800e3b38 48212BD8
 
-800e3b38	48212BD8 ;b 0x802f6710
-
-802f6710	80010014 ;lwz r0,20(r1)
-		94A1FFFC ;stwu r5, -0x4(sp)
-		94C1fffc ;stwu r6, -0x4(sp)
-		3CC08042 ;lis r6, 0x8042	!!!!!!!!!!
-		38C64FD0 ;addi r6,r6, 0x4fd0
-		38C64FD0 ;addi r6,r6, 0x4fd0
-		80A60000 ;lwz r5, 0(r6)
-		38A50001 ;addi r5,r5,1
-		90A60000 ;stw r5, 0(r6)
-		84c10000 ;lwzu r6, 0(sp)
-		84a10004 ;lwzu r5, 4(sp)
-		38210004 ;addi r1,r1,0x4
-		4BDED3FC ;b back
+802f6710 80010014
+802f6714 60000000
+802f6718 60000000
+802f671c 60000000
+802f6720 60000000
+802f6724 60000000
+802f6728 4BDED414
 
 
-<memory offset="0x800e3b38" value="48212bd8" />
-<memory offset="0x802f6710" value="8001001494A1FFFC94C1fffc3CC0804238C64FD038C64FD080A6000038A5000190A6000084c1000084a10004382100044BDED3FC" />
+
+<memory offset = "0x800e3b38" value = "48212bd8" />
+<memory offset = "0x802f6710" value = "8001001460000000600000006000000060000000600000004BDED414" />
 
 
-skriv helt i asm:
-800e3b38	48212BD8 ;b 0x802f6710
+save the records on the stack, use them, put them back !!
+WORKING, ALWAYS ADDRESS 0x8yyyyyyy !!!!!!!!!!
 
-800e3ad4	48212c3c ;b 0x802f6710	;kan vara bättre att köra här
+800e3b38 48212BD8; b 0x802f6710
+
+802f6710 80010014; lwz r0.20 (r1)
+94A1FFFC; stwu r5, -0x4 (sp)
+94C1fffc; stwu r6, -0x4 (sp)
+3ca00000; lis r5, 0
+3CC08042; lis r6, 0x8042 !!!!!!!!!!
+38C64FD0; addi r6, r6, 0x4fd0
+38C64FD0; addi r6, r6, 0x4fd0
+90A60000; stw r5, 0 (r6)
+84c10000; lwzu r6, 0 (sp)
+84a10004; lwzu r5, 4 (sp)
+38210004; addi r1, r1,0x4
+4BDED400; b back
+
+
+
+<memory offset = "0x800e3b38" value = "48212bd8" />
+<memory offset = "0x802f6710" value = "8001001494A1FFFC94C1fffc3ca000003CC0804238C64FD038C64FD090A6000084c1000084a10004382100044BDED400" />
+
+
+try increasing 1 on the points field each time:
+IT WORKS !!! runs x number of times per second, x =?
+
+800e3b38 48212BD8; b 0x802f6710
+
+802f6710 80010014; lwz r0.20 (r1)
+94A1FFFC; stwu r5, -0x4 (sp)
+94C1fffc; stwu r6, -0x4 (sp)
+3CC08042; lis r6, 0x8042 !!!!!!!!!!
+38C64FD0; addi r6, r6, 0x4fd0
+38C64FD0; addi r6, r6, 0x4fd0
+80A60000; lwz r5, 0 (r6)
+38A50001; addi r5, r5.1
+90A60000; stw r5, 0 (r6)
+84c10000; lwzu r6, 0 (sp)
+84a10004; lwzu r5, 4 (sp)
+38210004; addi r1, r1,0x4
+4BDED3FC; b back
+
+
+<memory offset = "0x800e3b38" value = "48212bd8" />
+<memory offset = "0x802f6710" value = "8001001494A1FFFC94C1fffc3CC0804238C64FD038C64FD080A6000038A5000190A6000084c1000084a10004382100044BDED3FC" />
+
+
+write completely in asm:
+800e3b38 48212BD8; b 0x802f6710
+
+800e3ad4 48212c3c; b 0x802f6710; might be better to drive here
 
 
 802f6710:
 
-#lwz r0,20(r1)		#orig för 3b38
-lbz r0,10(r31)		#orig för 3ad4
+#lwz r0.20 (r1) #orig for 3b38
+lbz r0.10 (r31) #orig for 3ad4
 
 #save registers
-stwu r5, -0x4(sp)
-stwu r6, -0x4(sp)
-stwu r4, -0x4(sp)
-stwu r3, -0x4(sp)
-stwu r7, -0x4(sp)
+stwu r5, -0x4 (sp)
+stwu r6, -0x4 (sp)
+stwu r4, -0x4 (sp)
+stwu r3, -0x4 (sp)
+stwu r7, -0x4 (sp)
 
-#set r7=0x80fyyzz0
+#set r7 = 0x80fyyzz0
 lis r5, 0x80d2
-addi r5,r5,0x5408	#r5 = 0x80d25408 = world_addr
-lwz r6, 0(r5) 		#r6 = world
+addi r5, r5,0x5408 # r5 = 0x80d25408 = world_addr
+lwz r6, 0 (r5) # r6 = world
 lis r5, 0x80d2
-addi r5,r5,0x50a8	#r5 = 0x80d250a8 = stage_addr
-lwz r4, 0(r5)		#r4 = stage
-li r3, 12		#shifta såhär mycket
-slw r6,r6,r3		#shifta r6 12 steg
-li r3, 4		#shifta 4
-slw r4,r4,r3		#shifta r4 4
+addi r5, r5,0x50a8 # r5 = 0x80d250a8 = stage_addr
+lwz r4, 0 (r5) # r4 = stage
+li r3, 12 #shift like this a lot
+slw r6, r6, r3 #shifta r6 12 steps
+li r3, 4 #shifta 4
+slw r4, r4, r3 #shifta r4 4
 lis r7, 0x80f0
-or r7,r7,r6
-or r7,r7,r4		#r7 = 0x80fyyzz0
+or r7, r7, r6
+or r7, r7, r4 # r7 = 0x80fyyzz0
 
 #check if finished playing, 1 at address 803551e4 if yes, 0 if no
 lis r5, 0x8035
-ori r5,r5,0x51e4	#r5 = 0x803551e4
-lwz r6, 0(r5)		#r6 = värde i r5
-cmpwi r6,1		#r6 == 1?
-beq .stage_complete	#yepp, jump to stage_complete
-			#here r6 == 0
+ori r5, r5,0x51e4 # r5 = 0x803551e4
+lwz r6, 0 (r5) # r6 = value in r5
+cmpwi r6,1 # r6 == 1?
+beq .stage_complete #yepp, jump to stage_complete
+#here r6 == 0
 
-#store timer++ in 0x80fyyzz0
-lwz r6, 0(r7)		#r6 = värde ur 0x80fyyzz0
-addi r6,r6,1		#timer++
-stw r6, 0(r7)		#store it back
+#store timer ++ in 0x80fyyzz0
+lwz r6, 0 (r7) # r6 = value from 0x80fyyzz0
+addi r6, r6,1 # hours ++
+stw r6, 0 (r7) #store it back
 
 #make sure the record isn't zero
-lwz r3, 4(r7)		#r3 = värde i r7+4 = record
-cmpwi r3,0		#compare r3 to zero
-bne .print_record	#if not, jump
-li r3,0x7512		#else, set record to 0x7512=999*60/2
-addi r3,r3,0x7512	#r3 = 999*60
-stw r3,4(r7)		#record = 999*60
+lwz r3, 4 (r7) # r3 = value in r7 + 4 = record
+cmpwi r3,0 #compare r3 to zero
+bne .print_record #if not, jump
+li r3,0x7512 #else, set record to 0x7512 = 999 * 60/2
+addi r3, r3,0x7512 # r3 = 999 * 60
+stw r3,4 (r7) #record = 999 * 60
 
 #print record at regular timeslot, 80d25bf8
 .print_record:
-lwz r3, 4(r7)		#r3 = record
-li r5, 60		#div 60
-divwu r3,r3,r5		#divide record by 60
-li r4, 0xc		#shift 12 steps
-slw r3,r3,r4		#shift r3 12 steps to the left
+lwz r3, 4 (r7) # r3 = record
+li r5, 60 #div 60
+divwu r3, r3, r5 #divide record at 60
+li r4, 0xc #shift 12 steps
+slw r3, r3, r4 #shift r3 12 steps to the left
 
 lis r5,0x80d2
-ori r5,r5,0x5bf8	#r5 = time_addr
-stw r3, 0(r5)		#store (record/60)<<12 in time_addr
+ori r5, r5,0x5bf8 # r5 = time_addr
+stw r3, 0 (r5) #store (record / 60) << 12 in time_addr
 
 #print timer into points_addr
-lis r5, 0x8042		#r5 = 0x80420000
-addi r5,r5,0x4fd0
-addi r5,r5,0x4fd0	#r5 = 0x80429fa0
-li r3,60		#load 60 into r3
-divwu r6,r6,r3		#timer = timer/60
-#li r3,100		#100 into r3
-#mulhwu r6,r6,r3	#timer *= 100
-stw r6, 0(r5)		#store back, r6 holds timer value
-b .end			#jump past stage_complete
+lis r5, 0x8042 # r5 = 0x80420000
+addi r5, r5,0x4fd0
+addi r5, r5,0x4fd0 # r5 = 0x80429fa0
+li r3,60 #load 60 into r3
+divwu r6, r6, r3 #hours = hours / 60
+#li r3,100 # 100 into r3
+#mulhwu r6, r6, r3 #timer * = 100
+stw r6, 0 (r5) #store back, r6 holds timer value
+b .end #jump past stage_complete
 
 .stage_complete:
 #here the stage is complete
 #check if it's a new record!
-lwz r4, 0(r7)		#r4 = värde i 0x80fyyz0
-lwz r5, 4(r7)		#r5 = värde i 0x80fyyz4 = record
+lwz r4, 0 (r7) # r4 = value in 0x80fyyz0
+lwz r5, 4 (r7) # r5 = value in 0x80fyyz4 = record
 
-cmp 0,1,r5,r4		
-bt lt, .recordend	#r4 > r5 => no record, go to recordend
-stw r4, 4(r7)		#record the record
+cmp 0.1, r5, r4
+bt lt, .recordend # r4> r5 => no record, go to recordend
+stw r4, 4 (r7) #record the record
 
-			
+
 lis r5,0x80d2
-ori r5,r5,0x5bf8	#r5 = time_addr
-stw r3, 0(r5)		#store 0 to regular timeslot so it won't get
-			#added to the points etc!
+ori r5, r5,0x5bf8 # r5 = time_addr
+stw r3, 0 (r5) #store 0 to regular timeslot so it won't get
+#added to the points etc!
 
-#lis r5, 0x8042		#r5 = 0x80420000
-#addi r5,r5,0x4fd0
-#addi r5,r5,0x4fd0	#r5 = 0x80429fa0
-#stw r6, 0(r5)		#also print out timer to points_addr!
+#lis r5, 0x8042 # r5 = 0x80420000
+#addi r5, r5,0x4fd0
+#addi r5, r5,0x4fd0 # r5 = 0x80429fa0
+#stw r6, 0 (r5) #also print out timer to points_addr!
 
 .recordend:
-li r3,0			#store 0 to r3
-stw r3, 0(r7)		#reset timer for next run etc
+li r3,0 #store 0 to r3
+stw r3, 0 (r7) #reset timer for next run etc
 
 .end:
 
-lwzu r7, 0(sp)
-lwzu r3, 4(sp)
-lwzu r4, 4(sp)
-lwzu r6, 4(sp)
-lwzu r5, 4(sp)
-addi r1,r1,4
+lwzu r7, 0 (sp)
+lwzu r3, 4 (sp)
+lwzu r4, 4 (sp)
+lwzu r6, 4 (sp)
+lwzu r5, 4 (sp)
+addi r1, r1,4
 b back
 
 881F000A 94A1FFFC
@@ -525,22 +525,22 @@ b back
 
 4BDED2D0
 
-0x80fyyzz0	r7, nuvarande tid i sekunder*60, alltså orörd
-0x80fyyzz4	rekordtid, också orörd
-0x80429fa0	points_addr, 0x80fyyzz0/60, helst också med tiondelar
-0x80d25bf8	regular_timeslot, (0x80fyyzz0/60)<<12
+0x80fyyzz0 r7, current time in seconds * 60, thus untouched
+0x80fyyzz4 record time, also untouched
+0x80429fa0 points_addr, 0x80fyyzz0 / 60, preferably also with tenths
+0x80d25bf8 regular_timeslot, (0x80fyyzz0 / 60) << 12
 
 
 
-ta tiden/60 för att få i sekunder! multa sedan med 4096 (0x1000) innan det lagras i record!
+take the time / 60 to get in seconds! multiply then by 4096 (0x1000) before it is stored in record!
 
-0x på offset!!!!!!!!!!!!!!!!
-<memory offset="0x800e3ad4" value="48212c3c" />
-<memory offset="0x802f6710" value="881F000A94A1FFFC94C1FFFC9481FFFC9461FFFC94E1FFFC3CA080D238A5540880C500003CA080D238A550A8808500003860000C7CC61830386000047C8418303CE080F07CE733787CE723783CA0803560A551E480C500002C0600014182006480C7000038C6000190C70000806700042C030000408200103860751238637512906700048067000438A0003C7C632B963880000C7C6320303CA080D260A55BF8906500003CA0804238A54FD038A54FD03860003C7CC61B9690C500004800002C8087000080A700047C25200041800014908700043CA080D260A55BF890650000386000009067000084E10000846100048481000484C1000484A10004382100044BDED2D0" />
+0x on offset !!!!!!!!!!!!!!!!
+<memory offset = "0x800e3ad4" value = "48212c3c" />
+<Memory Offset = "0x802f6710" value = "881F000A94A1FFFC94C1FFFC9481FFFC9461FFFC94E1FFFC3CA080D238A5540880C500003CA080D238A550A8808500003860000C7CC61830386000047C8418303CE080F07CE733787CE723783CA0803560A551E480C500002C0600014182006480C7000038C6000190C70000806700042C030000408200103860751238637512906700048067000438A0003C7C632B963880000C7C6320303CA080D260A55BF8906500003CA0804238A54FD038A54FD03860003C7CC61B9690C500004800002C8087000080A700047C25200041800014908700043CA080D260A55BF890650000386000009067000084E10000846100048481000484C1000484A10004382100044BDED2D0" />
 
 
-NÄR DET EJ VAR ETT REKORD:
-SÄTT 803551f8 till FFFFFFFF när 803551e4 är satt till 1,
-sätt sedan 803551e4 till 2 så tar banan slut!
+WHEN IT WASN'T A RECORD:
+SET 803551f8 to FFFFFFFF when 803551e4 is set to 1,
+then set 803551e4 to 2 and the path ends!
 
-GÖR EN PORTAL-MOD!!!!
+MAKE A PORTAL MOD !!!
