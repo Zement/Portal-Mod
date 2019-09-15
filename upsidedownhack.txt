@@ -1,131 +1,131 @@
 80070fb0
 
-testa:
-8006dcd8	38002000
+test:
+8006dcd8 38002000
 
 
-Kan hoppa även om man är i luften! Dock ej någon collision detection alls..
-80071210	4e800020
+Can jump even when in the air! However, no collision detection at all ..
+80071210 4e800020
 
-kan hoppa även om man är i luften! collision detection med!
-80070ef0	4e800020
+can jump even when in the air! collision detection with!
+80070ef0 4e800020
 
 nograv:
-8042bb44	00000000
+8042bb44 00000000
 
-korrekt (typ) modell upponer:
-8154b8e0	bf800000
-8154b8e4	bf800000
+correct (type) model opponer:
+8154b8e0 bf800000
+8154b8e4 bf800000
 
 
 
-!!!!!!BÄTTRE MODELL UPPONER!!!!!!:
-funkar bara bra när man är liten :(
-8154b908	80000000
+!!!!!! BETTER MODEL UPDATE !!!!!!:
+only works well when you're small :(
+8154b908 80000000
 
 
 
 80128264?
 80128100?
 
-80129e70	körs när man böjer sig och hoppar!
+80129e70 runs when you bend and jump!
 
-80127350	hopp?
+80127350 hope?
 
-80128264	hopp???
+80128264 jump ???
 
-8012771c	lägger till hastighet i y när man hoppat!
+8012771c adds speed to y when jumping!
 
 
 801272b0
 800592ac
 
-800592a8	60000000
+800592a8 60000000
 
 8015fbe0
 
-8015fb70!!!???
+8015fb70 ??? !!!
 
-testa 8015fbb8	60000000
-
-
+test 8015fbb8 60000000
 
 
 
-8042dc0c!!! 	sätt till plus!!
-8042da58	sätt till minus!!
-8042bbb8	-2! det som sätts 24/7!
-
-801275b0	räkna ut alla arc-grejer i hopp?
-		har kanske med sidohastighet i hopp att göra
 
 
-801468b0	har nog mer med det att göra!
+8042dc0c !!! way to plus !!
+8042da58 way to minus !!
+8042bbb8 -2! what is set 24/7!
+
+801275b0 figure out all the arc stuff in hope?
+may have to do with side speed in hope
 
 
-8004c5ec	detta är det ju som ändrar fallhastigheten!!
-		...bara när man är högst upp typ...
+801468b0 probably has more to do with it!
+
+
+8004c5ec this is the one that changes the fall rate !!
+... only when you are at the top type ...
 
 
 
-8004c58c	läser in -.34 från 802f595c och sparar i b918
+8004c58c loads -.34 from 802f595c and saves in b918
 
-8004c5e0	läser in -0.06 och sparar i 8154b918 om man är på marken
-		läser dock in -0.34 om man är där uppe!!!
+8004c5e0 loads -0.06 and saves in 8154b918 if you are on the ground
+however reads -0.34 if you are up there !!!
 
-8004c5ac	bestämmer nog vilket som ska läsas in.. hamnar i 
-		801468b0
+8004c5ac probably decides which to load .. ends up in
+801468b0
 
 8004c5d4
 
-80056bdc	läser från +0x1090
+80056bdc reads from + 0x1090
 
 
-8154c6a8/c	viktig för arc, 01000000 om man håller in ettan!
+8154c6a8 / c important for arc, 01000000 if you hold one!
 
-8004c520	kör denna när upp och ner!
+8004c520 runs this when up and down!
 
 8004c5b0
 
 
 
-8004c5c0	ble-, ändra till beq- när upp och ner!!!
+8004c5c0 ble-, change to beq- when up and down !!!
 
 
-8043fcb4	blir 2.0 ibland och läggs till i x-led, varför??
+8043fcb4 gets 2.0 sometimes and is added to the x-link, why ??
 
 
-8006cd14	60000000, för att inte lägga till i x-led, testa!!
-		springer bara på stället då...
+8006cd14 60000000, not to add to x-joints, test !!
+only runs on the spot when ...
 
-800575f0	lägger till skit i förgasarn???
-		testa 60000000 här istället!
+800575f0 adds shit to the carburetor ???
+test 60000000 here instead!
 
 
-när man hoppar på marken, b918 skrivs av (typ):
+when jumping on the ground, b918 is written off (type):
 801468b0
 8004c5fc
-(8004c6e0)	OM MAN EJ HÅLLER INNE TVÅAN!
+(8004c6e0) IF YOU DON'T KEEP TWO!
 
 
-när man hoppar från taket, b918 skrivs av (typ):
+when jumping off the roof, b918 is written off (type):
 801468b0
 8004c5fc
-(8004c6e0)	om man ej håller inne tvåan!
+(8004c6e0) if you do not hold the second!
 
 
 
 
-fixa hopp upponer:
-80057104	ec010028	så att man faller uppåt!
-måste dock fixa så att man hoppar neråt...
+Fix Hope Opponents:
+80057104 ec010028 to fall upwards!
+must, however, fix so that you jump down ...
 
 
-fixa hopp neråt:
+fix hope down:
 
 
-BR på 800570f8!
-BR på 80057150
+BR on 800570f8!
+BR at 80057150
 
 800570e4
 
@@ -134,174 +134,174 @@ BR på 80057150
 
 
 
-8014369c	läser in 8042bb44 - gravity!
+8014369c loads 8042bb44 - gravity!
 
 
 80071210:
-~70: tar marios position och nästa position och gör något med
+~ 70: takes Mario's position and next position and does something about it
 
 
-80127480: jump-funktion! körs när man trycker på hoppknappen
+80127480: jump function! is run when you press the jump button
 
 80057a68: jump?
 
 8005e710: jump?
 
-8005e3b0: juuuump??
+8005e3b0: juuuump ??
 
 
-800d9970	remove object?
+800d9970 remove object?
 
 
 8004e4d0
 
 
 
-testa:
-8006efa0	60000000
-800706c8	60000000
+test:
+8006efa0 60000000
+800706c8 60000000
 
-8006dcdc	60000000
-8006f0b0	60000000
+8006dcdc 60000000
+8006f0b0 60000000
 
 
-80054688	60000000
-80054698	60000000
-80054898	60000000
-80054888	60000000
+80054688 60000000
+80054698 60000000
+80054898 60000000
+80054888 60000000
 
-80054920	60000000
-80054950	60000000
-8005497c	60000000
+80054920 60000000
+80054950 60000000
+60000000 8005497c
      98c
-    4a10
+    4A10
     4a20
 
 
-###DESSA!!!###
-80070ef0	4e800020
+###THESE!!!###
+80070ef0 4e800020
 
-80054688	60000000
-#80054698	60000000
-#80054898	60000000
-#80054888	60000000
+80054688 60000000
+# 80054698 60000000
+# 80054898 60000000
+# 80054888 60000000
 
-80054d64	60000000	lägger inte till 0400...?
-#80054398	60000000
+80054d64 60000000 does not add 0400 ...?
+# 80054398 60000000
 
 also:
-#80057150	60000000
-8042bb44	00000000
+# 80057150 60000000
+8042bb44 00000000
 ##############
 
 
 
-48 - ?-knapp
-49 - blå P
-4A - utropstecken
+48 -? Button
+49 - blue P
+4A - exclamation point
 
 
-8153da00:	?-knapp!
-8153e2c0:	?-knapp
-8153eb80:	!-knapp
-8153f440:	P-knapp
-8153fd00:	?-knapp
+8153da00:? Button!
+8153e2c0:? Button
+8153eb80:! Button
+8153f440: P Key
+8153fd00:? Button
 
-knapp + 0x558 = 0 när itryckt, 3f800000 annars
+button + 0x558 = 0 when pressed, 3f800000 otherwise
 
 
-hastigheter i vanligt hopp:
-3.868		.06
-3.808		.34
-3.468		.34
-3.128		
+speeds in normal jump:
+3.868 .06
+3.808 .34
+3.468 .34
+3.128
 2.788
 ...
 
 
 
-8153fe60	koopa
-81540888	goomba
+8153fe60 koopa
+81540888 goomba
 
-80a73ee0	flyttar fiender (koopa iaf...), 
-		kan använda denna för att ändra grav!
-		och rotera dom etc!
+80a73ee0 moves enemies (buy in ...),
+can use this to change the grave!
+and rotate them etc!
 
-80032170	flyttar goomba
+80032170 moves goomba
 
 80033180
 8015fe80
 
-8006cd90	handle x speed, bara koopa?
-8006cde0	handle y speed, både koopa och goomba!!
+8006cd90 handle x speed, just buy?
+8006cde0 handle y speed, both koopa and goomba !!
 
 
-konstig rörelse åt höger när bbb8 är 2.0:
+strange movement to the right when bbb8 is 2.0:
 802f6d00
 80057600
-8008c2c0	clear_activephysics
+8008c2c0 clear_activephysics
 
-8006cd00	man kan ej röra sig om den avaktiveras..
-
-
-
-### fixa offset ###
-8006f394	flyttar ut mario massa? this is it??
-
-8154b96c	hitbox offset!!!!!!! checka write!!
-
-skrivs i:
-8014249c	lagrar!!
-801424d0	samma
+8006cd00 you can not move if it is deactivated ..
 
 
-80142494	lagrar i b970
-801424d8	samma
+
+### fix offset ###
+8006f394 moving out mario mass? this is it ??
+
+8154b96c hitbox offset !!!!!!! checka write !!
+
+is written in:
+8014249c stores !!
+801424d0 same
 
 
-801424d4	lagrar i b974
+80142494 stores in b970
+801424d8 same
 
 
-80142170	hela funken
+801424d4 stores in b974
 
-skriver y-pos:
+
+80142170 the whole funk
+
+type y-pos:
 8006cd20
 8005713c
-8006f7c8	!!!
+8006f7c8 !!!
 
 
 
 
 
 
-8016a2b0	DENNA fixar draw-matriser, this is it typ!!!
+8016a2b0 THIS fixes draw matrices, this is the type !!!
 
 
-ändrar matrisen för koopa i y-led:
+changes the matrix for Koa in y-direction:
 800384bc
 80a73148
 
 
 
-800d7110	avaktiveras denna så ritas mario ej!
+800d7110 deactivates this so mario is not drawn!
 
-800ca654	60000000 => ritas ej
-800d3b8c	60000000 => inget
-800d3b40	60000000 => bara huvudet ritas ut :D
-800d3b50	60000000 => samma :O
-800d3b6c	60000000 => bara kroppen ritas ut :)
-800d3b80	60000000 => hänger sig
+800ca654 60000000 => not drawn
+800d3b8c 60000000 => nothing
+800d3b40 60000000 => only the head is drawn: D
+800d3b50 60000000 => same: 0
+800d3b6c 60000000 => only the body is drawn :)
+800d3b80 60000000 => hanging
 
-80164fac	60000000 => skärmen blir svart utom statusgrejer!
+80164fac 60000000 => the screen turns black except status items!
 
 
 8154c660?
 
-8154ced0, fortfarande en massa matriser??
+8154ced0, still a lot of matrices ??
 
 
-80329ca0	står bland alla matriser..
-80308d80	
+80329ca0 stands among all matrices ..
+80308d80
 80350d48
 
 811ea984
@@ -311,23 +311,23 @@ skriver y-pos:
 8042e1e4
 
 
-8016a2b0	setDrawMatrix
+8016a2b0 setDrawMatrix
 
-80164d90	något med floating point händer här
-802cd4e0	samma...
-802c0e90	samma... händer direkt här
-801c7130	samma
-
-
-
-0x2c4		hela statusradsgrejen!
-0x2c3		något annat?
+80164d90 something with floating point hands here
+802cd4e0 same ...
+802c0e90 same ... happens right here
+801c7130 same
 
 
 
-804295f8	sätter storlek på bakgrund!
+0x2c4 the entire status bar thing!
+0x2c3 anything else?
 
-8087720c	60000000
+
+
+804295f8 size on background!
+
+60000000 8087720c
 
 815417d0
 
@@ -380,256 +380,256 @@ b8ec
 8154b8e8
 
 
-### fixa hoppa sönder upponer! ###
-värde i +0x1b8
+### fix jump break opponer! ###
+value in + 0x1b8
 
 
-80095a10	60000000, mario kan ej interagera
-80095d30	preplayercollision
-80095c20	playercollision, kan inte dö men kan döda när denna är inaktiv!
+80095a10 60000000, mario cannot interact
+80095d30 preplayercollision
+80095c20 player collision, cannot die but can kill when inactive!
 
 
-80031790	
+80031790
 
 
-800a0ea0	kill goomba när man hoppar! dock ej koopa..
+800a0ea0 kill goomba when jumping! however not buy ..
 
-800317f4	hoppar till 80031950, man kan hoppa på goombas utan att dom dör
-		dock ej koopas
+800317f4 jumps to 80031950, you can jump on goombas without them dying
+however, no buy ash
 
-80095abc	körs när man springer på en goomba, ELLER en koopa
-		800389e0 när koopa, 80031790 när goomba!!!
+80095abc is run when you run on a goomba, OR a koopa
+800389e0 when koopa, 80031790 when goomba !!!
 
-80038c30	kommer hit om man hoppar på koopa, ej annars!!
-		baseras på r3 som läses in i 800964a0!!
+80038c30 comes here if you jump on the koa, not otherwise !!
+is based on r3 loaded into 800964a0 !!
 
-800964fc	KOMMER BARA HIT OM MAN GÅR IN I NÅN!! :D
-		baseras på r3 som läses in i 800a29c0!!!
-
-
-800a2ae0	samma, baseras på r3 från 800a2870
-
-800a2998	jämför hastigheten med något, THIS IS not... IT!!!
-TESTA:
-800a2998	ble- 0xc! GER att man dör om man hoppar på, men även
-		om man hoppar på med upp-grav...
+800964fc WILL ONLY HIT IF YOU GO INTO SOMEONE !! : D
+is based on r3 loaded into 800a29c0 !!!
 
 
-800a296c	kommer bara hit om man hoppar!
-TESTA:
-800a2968	blt 0x3c (4180003C) funkar att hoppa, men även att springa in i tyvärr!
-		nop funkar att hoppa både uppe och nere samtidigt!
+800a2ae0 same, based on r3 from 800a2870
+
+800a2998 compares speed with something, THIS IS NOT ... IT !!!
+TEST:
+800a2998 ble- 0xc! GIVES you to die if you jump on, but also
+if you jump on the up-grave ...
 
 
-800b07b0	läser in FIENDENS _NÅGOT_ i f1!
+800a296c only comes here if you jump!
+TEST:
+800a2968 blt 0x3c (4180003C) works to jump, but also to run into unfortunately!
+nop works to jump both up and down at the same time!
+
+
+800b07b0 loads FIENDENS _SOME_ in f1!
 
 
 
---->8008cc2c	lagrar _NÅGOT_ i f1
+---> 8008cc2c stores _SOME_ in f1
 
 ________
 8008cc28
 ________
 
 
-8008cb64	lagrar f2 
-8008c2e4	lagrar f0
-8008cb88	lagrar f0
+8008cb64 stores f2
+8008c2e4 stores f0
+8008cb88 stores f0
 
 
 
-8008cb64	samma, djupare
+8008cb64 same, deeper
 
 
 
-##HELA GREJEN!
-f1 läses från 8043fd38 ~ 1183.12
-f0 läses från 8043fd30 ~ 1184.5
-f3 läses från 8154b970 = 4.0
+## ALL THE GREAT!
+f1 is read from 8043fd38 ~ â€‹â€‹1183.12
+f0 is read from 8043fd30 ~ 1184.5
+f3 is read from 8154b970 = 4.0
 f4 = f1 - f0 ~ -1.378
-f1 läses från 0x81541a68+0x24 = 0x81541a8c = 8.0
-f2 läses från 0x8043fd3c ~ -586.304016
+f1 is read from 0x81541a68 + 0x24 = 0x81541a8c = 8.0
+f2 is read from 0x8043fd3c ~ -586.304016
 f5 = f3 + f1 = 12.0
-f0 läses från 8043fd34 = -600
-fabs f3, f8 => 
+f0 is read from 8043fd34 = -600
+fabs f3, f8 =>
 f3 = f4 ~ -1.378
 
 f6 = f2 - f0 ~ 13.695984
-f1 läses från 0x8154b94c + 0x28 = 0x8154b974 = 7.0
-f0 läses från 0x81541a68 + 0x28 = 0x81541a90 = 8.0
-frsp f2, f3 => f2 blir samma som f3 och f4
+f1 is read from 0x8154b94c + 0x28 = 0x8154b974 = 7.0
+f0 is read from 0x81541a68 + 0x28 = 0x81541a90 = 8.0
+frsp f2, f3 => f2 becomes the same as f3 and f4
 f3 = f1 + f0 = 7 + 8 = 15.0
-fcmpo f2, f5 =>  -1.378, 12.0
-bge någonstans, annars=>
+fcmpo f2, f5 => -1.378, 12.0
+bge somewhere, otherwise =>
 
-fabs f0,f8 => f0 = 13.695...
+fabs f0, f8 => f0 = 13,695 ...
 
 fcmpo f0, f3 => 13.695, 15.0
-bge någonstans, annars=>
+bge somewhere, otherwise =>
 
-f0 = 0x8043fd38 ~ 1183.12
-spara f0 i 8154b94c + 0x90
+f0 = 0x8043fd38 ~ â€‹â€‹1183.12
+save f0 in 8154b94c + 0x90
 f0 = 0x8043fd3c = -586.304016
-spara f0 i 8154b94c + 0x94
+save f0 in 8154b94c + 0x94
 
-samma för den fienden...
+same for the enemy ...
 
 ...
 
-r0 = 0x8154b94c+0x38 = 0
-hoppa iväg
-fabs f2, f8 => inget händer???
+r0 = 0x8154b94c + 0x38 = 0
+jump away
+fabs f2, f8 => nothing happening ???
 f0 = 0x80433360-0x7080 = 0
 f1 = 0x80433360-0x7078 = 0.5
 fcmpo f4, f0 => -1.378, 0
 frsp f0, f2 => f0 = f2
 f0 = f5 - f0 = 10.622
-f4 = f0*f1 = 5.311
-bge någonstans, annars=>
+f4 = f0 * f1 = 5.311
+bge somewhere, otherwise =>
 f4 = -f1 = -5.311
-fabs f2, f8 => f2 = 13.695...
+fabs f2, f8 => f2 = 13,695 ...
 f0 = 0x80433360-0x7080 = 0
 f1 = 0x80433360-0x7078 = 0.5
 fcmpo f6, f0 => 13.695, 0
 f0 = f2 = 13.695
-f0 = f3-f0 = 1.305...
-f2 = f0*f1 = 0.6525...
-bge ett hopp=>
-r0 = 0x2c+0x81541a68 = 3
-fneg f1,f1 => f1 = 5.311
-fneg f0,f1 => f0 = -.6525
+f0 = f3-f0 = 1.305 ...
+f2 = f0 * f1 = 0.6525 ...
+give a jump =>
+r0 = 0x2c + 0x81541a68 = 3
+fneg f1, f1 => f1 = 5.311
+fneg f0, f1 => f0 = -.6525
 
-nu är f1 = 5.311
+now f1 = 5.311
 f0 = -.6525
 
-DETTA f0 LAGRAS I KONSTIGA TALET!!
+THIS f0 IS STORED IN THE ORIENTAL NUMBER !!
 
 
 
-totalt:
-f0 = -0.5*(15-(ypos+600))
+totally:
+f0 = -0.5 * (15- (ypos + 600))
 _________________________
 
-där ypos = -586.304016 = mario.ypos-7.0??
+where ypos = -586.304016 = mario.ypos-7.0 ??
 
 
-testa:
+test:
 ---
-8008cb74	lfs f11, -0x7004(rtoc)	C1628FFC 
-8008cb88	stfs f11, 0x70(r4)	D1640070
+8008cb74 lfs f11, -0x7004 (rtoc) C1628FFC
+8008cb88 stfs f11, 0x70 (r4) D1640070
 
-lagrar -0.5 i konstiga talet
+stores -0.5 in odd number
 
-Med dessa går det att springa in i alla fiender,
-MEN så länge de är på plan mark!! genombrott??
+With these you can run into any enemy,
+BUT as long as they are on flat ground !! breakthrough??
 
-att läsa in -4.0 istället ger samma sak
-att läsa in -.04 istället ger samma sak
+reading -4.0 instead gives the same thing
+reading -.04 instead gives the same thing
 ---
 
 
 
-80095d30	preplayercoll, körs när man hoppar eller går in i
-80095C20	playercoll, körs när man faktiskt kollajdar
-800b07ec	min egen sån hoppgrej, fnegar f1 etc
+80095d30 preplayercoll, run when jumping or entering
+80095C20 playercoll, run when actually colliding
+800b07ec my own kind of jump gear, when f1 etc
 8008cc24
-80097170	mark dead!
-80031790	kommer hit om man både hoppar och dör!
-		kör playercoll och därmed DÖD härifrån!
+80097170 mark dead!
+80031790 comes here if you both jump and die!
+drive playercoll and thus DEATH from here!
 
-800317c0	bestämmer om man ska dö!!! kör 800964a0!
+800317c0 decides if to die !!! run 800964a0!
 
-800964e8	samma, djupare, kör 800a29c0
-800a2ad4	samma, djppare, kör 800a2870
-800a2994	this is it?? igen??
+800964e8 same, deeper, running 800a29c0
+800a2ad4 same, deeper, running 800a2870
+800a2994 this is it ?? again??
 
-HELA HÄR MED:
-tar konstiga talet f1:
+ALL HERE:
+takes strange number f1:
 f0 = 2;
 
-f1 = f1*2;
+f1 = f1 * 2;
 f0 = 3;
 fcmp f1, 3
 
-om större än 3: DÖ
-annars, DÖDA!
+if greater than 3: DIE
+otherwise, DEATH!
 
-SÅ FELET LIGGER ÄNDÅ I DÄR 0x70 UTRÄKNAS!!!
-ALLTSÅ I 8008ca50!!!!!
-
-
-f0 = -.5*(15-(451.5499-439.8999)) ~ -1.675!!
-LADDA F5!!!
+SO THE ERROR IS ALWAYS IN WHERE 0x70 IS CALCULATED !!!
+THEN IN 8008ca50 !!!!!
 
 
-f0 = -.5*(15-(marioypos+7 - goombaypos))
+f0 = -.5 * (15- (451.5499-439.8999)) ~ -1.675 !!
+CHARGE F5 !!!
+
+
+f0 = -.5 * (15- (marioypos + 7 - goombaypos))
 
 
 
-ALLA konstiga tal i 8043fd38 läggs till i 8008cbd4 och framåt!!!
-Vissa räknas ut i 8008c570 som körs från 8008cbd0!!!
+ALL weird numbers in 8043fd38 are added in 8008cbd4 onwards !!!
+Some are calculated in 8008c570 which runs from 8008cbd0 !!!
 
-men främst 8008cbf0?
+but mainly 8008cbf0?
 
 8008cba0
 
-802f0ac0	bestämmer vilket tal det högst får vara!!!
-		3 i orig, ändra till 4 kanske???
+802f0ac0 decides which number it may be the highest !!!
+3 in orig, change to 4 maybe ???
 
 
 
 
 
-80095a3c	60000000 => man kan butthoppa, men ej interagera annars
+80095a3c 60000000 => one can but jump but not interact otherwise
 
-80095a74	60000000 => 
-
-
-800971f0	kill??
+80095a74 60000000 =>
 
 
-prova med goomba:
+800971f0 kill ??
+
+
+try with goomba:
 
 8152ad60
-8152af18	specialstället
+8152af18 special place
 
 8043fd34: -591.884766
 8154b8b4: -585.624084
-hmmm 6.260682 i skillnad...
+hmmm 6.260682 unlike ...
 
 
-jämförelserna (bge snarare..) vid 8008ca8c och 8008ca9c kan fucka upp!!
-verkar dock ej så..
+the comparisons (bge rather ..) at 8008ca8c and 8008ca9c can fuck up !!
+does not seem so ..
 
-TODO: kolla vad som händer i 8008cc24 när man springer in i någon!!
-
-
-
-
-800a2918	läser från 8042c608
-
-800a295c	60000000 => gör att man kan springa in i fiender, noo!
-
-81541920	bobomb i savefile f2
-81541ad8	konstigt tal i bobomb
+TODO: check out what happens in 8008cc24 when you run into someone !!
 
 
 
-80128254	lagrar fnegad speed i marios! läser den från 8043fc64!
-80146d14	lagrar hastigheten i 8043fc64!
 
-80127344	lagrar adressen till fnegad speed?
-		läses in från 8154b804+0x14a0 = 8154cca4!
+800a2918 reads from 8042c608
+
+800a295c 60000000 => allows you to run into enemies, no!
+
+81541920 bobomb in savefile f2
+81541ad8 strange number in bobomb
+
+
+
+80128254 stores fucked speed in marios! read it from 8043fc64!
+80146d14 stores the speed in 8043fc64!
+
+80127344 stores the address for gnawed speed?
+read from 8154b804 + 0x14a0 = 8154cca4!
 
 8004740c
 8004743c
 
 
 
-#goomba vid 81541808
-kollar 815419c0 = 1808+ 0x1b8
+#goomba at 81541808
+checks 815419c0 = 1808+ 0x1b8
 
-800a295c	läser in 815419c0
+800a295c loads 815419c0
 
 
 
@@ -637,8 +637,8 @@ kollar 815419c0 = 1808+ 0x1b8
 
 !!!
 
-800e453c	aktiverar event om r0 = 0x10,
-		avaktiverar event om r0 = 0!!!!
+800e453c activates events if r0 = 0x10,
+disables event if r0 = 0 !!!!
 
 !!!
 
@@ -651,9 +651,9 @@ changes 8154b8b4 on the ground and ceiling:
 802f6d00
 
 
-8006f390	movar mario!
+8006f390 movar mario!
 
-8006f7c4	movar?
+8006f7c4 Movar?
 
 
 801b512c
@@ -662,48 +662,48 @@ changes 8154b8b4 on the ground and ceiling:
 
 
 #crouching
-801467e0	60000000
+801467e0 60000000
 
-80269f24	
+80269f24
 80269df8
 
-8154bc90	3 när man glider, 0 annars?
+8154bc90 3 when sliding, 0 otherwise?
 
 
 
-80056d50	4e800020 => slutar aldrig att glida animationsmässigt
+80056d50 4e800020 => Never stop animating
 
-8004b380	4e800020 => fakkar ur
+8004b380 4e800020 => packs out
 
-80048630	4e800020 => glider animationsmässigt, men står still
+80048630 4e800020 => slides animated, but stands still
 
 8012ad10
 
 
 
-80146794	storar 4.0 om man duckar
-801467c0	storar 8.0 om man ej duckar
+80146794 size 4.0 if you duck
+801467c0 size 8.0 if you don't duck
 
-801423c4	storar 3.5 eller 7.0 i 8154ccec
+801423c4 size 3.5 or 7.0 in 8154ccec
 
-80142fd0	storar crouch-status i 8154ccf4
+80142fd0 stores crouch status in 8154ccf4
 
-802d8b30	storar nåt om crouch i 8154c098
-802d7e80	samma typ
+802d8b30 does something about crouch in 8154c098
+802d7e80 same type
 
 
 
 
 80059260
-800481c0	glider????
-8012acc0	glider???
-80048630	glider??
-80046768	innan glider?
-8004b460	fixar fart när man glider!!
+800481c0 slides ????
+8012acc0 slides ???
+80048630 slides ??
+80046768 before slipping?
+8004b460 fixes speed when sliding !!
 
 
 
-hanterar y pos när man glider:
+handles y pos when sliding:
 8006ecbc
 
 
@@ -711,169 +711,169 @@ hanterar y pos när man glider:
 
 
 #killing out of zone?
-8005fe30	dödar allmänt??
+8005fe30 kill generally ??
 
-8013d920	dödar?
+8013d920 kill?
 
-8013df80	dödar genom fall
-		utan denna händer inget!
-		marios adress i r3 och r4
-
-
-8042c888	hmmmmmmmmmmmmmmmmmmmmmmmmmmm
+8013df80 kills by fall
+without this nothing happens!
+mario's address in r3 and r4
 
 
-8013dc40	dödar allmänt?
+8042c888 hmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+
+8013dc40 generally kill?
 
 
 8014a7a0
 
 
-80057184	kör flyttning, dock ej in till zon
+80057184 drives relocation, but not into zone
 
-80057114	läser in läge i y
+80057114 loads mode in y
 
 
 8015fe5c
 
-802dcf10	kör 8013df80 om man dör
+802dcf10 runs 8013df80 if you die
 
 
 #standing on blocks upside down fix
 80004600
-800951ec	goes to 80097f40
-80095458	goes somewhere
+800951ec goes to 80097f40
+80095458 goes somewhere
 
 
-81541cbc	size of block
+81541cbc size of block
 815301fc
 
 80022dc0
-80022e50	stores size	
+80022e50 stores size
 
 
-80022E60	4e800020!!!!!!!! Funkar för brick blocks, dock ej [!]
-		förstör dock om man är stor........
+80022E60 4e800020 !!!!!!!! Works for brick blocks, though not [!]
+destroy though if you are big ........
 
-80023bd0	4e800020
+80023bd0 4e800020
 
 
 
 
 #jump on enemies upside down etc
 
-81530cf8	bobombs hoppgrejs
-815419c0	goombas hoppgrejs
+81530cf8 bobombs jump gear
+815419c0 goombas jump gear
 
 
-8008cc28	60000000 => man dör dirr
+8008cc28 60000000 => you die dirr
 
-8008ca90	
-
-
-
-
-
-80095a10	60000000 gör en genomskinlig
-
-80095a34	60000000
+8008ca90
 
 
 
 
-#fixa ökandet av poäng etc
+
+80095a10 60000000 makes it transparent
+
+80095a34 60000000
 
 
-80159e3c	
 
-800cea40	4e800020
-80060690	samma
-80159df0	samma
+
+#fix the increase in points etc
+
+
+80159e3c
+
+800cea40 4e800020
+80060690 same
+80159df0 same
 
 
 
 81547508
-81547908	lagrar ackumulerade poängen
-8035529c	samma
-80429fa0	samma
+81547908 stores the accumulated points
+8035529c same
+80429fa0 same
 
-8154c884	säger hur många gånger man hoppat på fiende!!!!
-		nollställ när man landar etc!!!
-		+0x1080
-
-
+8154c884 says how many times you jumped on the enemy !!!!
+reset when landing etc !!!
++ 0x1080
 
 
-#8154b8d8??
-801467e0	store
-
-#8154c834??
-80146770	store
 
 
-#8154ccec???
-801423c4	store
+# 8154b8d8 ??
+801467e0 store
+
+# 8154c834 ??
+80146770 store
 
 
-#8154b96c??
-8014249c	lagrar!!
-801424d0	samma
-
-#8154b970
-80142494	lagrar i b970
-801424d8	samma
-
-#8154b974
-801424d4	lagrar i b974
+# 8154ccec ???
+801423c4 store
 
 
-800543e0	flyttar mario etc?
+# 8154b96c ??
+8014249c stores !!
+801424d0 same
+
+# 8154b970
+80142494 stores in b970
+801424d8 same
+
+# 8154b974
+801424d4 stores in b974
 
 
-800575fc	flyttar mario def.
-
-8043fcb8	offseten lagras här! först 4, sen 2.34*3 = 11.02!!!
-
-800575f8	offseten lagras i 8043fcb8 här
-förmodligen inte detta ställe som ska kollas, detta 
-är ju antigravitationsgrejen som alltid ska köras, ska nog snarare kolla
-gravitationsgrej så att mario faktiskt flyger upp mer osvosvosv...
+800543e0 moving mario etc?
 
 
-8006f750	det måste vara denna va?
+800575fc moves mario def.
+
+The 8043fcb8 offset is stored here! first 4, then 2.34 * 3 = 11.02 !!!
+
+The 800575f8 offset is stored in 8043fcb8 here
+probably not this place to be looked at, this
+is the anti-gravity thing that should always be run, should probably rather check
+gravity gear so that mario actually flies up more and so on ...
+
+
+8006f750 it must be this huh?
 
 f1 = mario.y + 26
 f2 = 0.1
 f0 = 0
-f3 = -432	??? kanske toppen osv????!?
-funkar, men går ej att hoppa med mario sen.. för att han sitter fast osv
+f3 = -432 ??? maybe the top etc ????!?
+works, but can not jump with mario then .. because he is stuck, etc.
 
-så r3+0x274 måste vara 04000000!!
-lagras i 8006dcdc!!
-
-
-
-
-kommer man till 80056cf0 på marken efter hopp etc???
-(egentligen 8005514c!!!)
+so r3 + 0x274 must be 04000000 !!
+stored in 8006dcdc !!
 
 
 
-80055134	kolla om 1 osv!!
+
+do you come to 80056cf0 on the ground after jumping etc ???
+(really 8005514c !!!)
+
+
+
+80055134 check out 1 etc !!
 
 8005515c
 
 80143ebc
 
 
-80055130	kör 80056cf0
+80055130 runs 80056cf0
 
 
-80054f80...
+80054f80 ...
 
 
 
-###alla värden som ändras i mario när han är stor!###
+### all the values â€‹â€‹that change in mario when he is big! ###
 8154b8d8
 8154b96c
 8154b970
@@ -884,7 +884,7 @@ kommer man till 80056cf0 på marken efter hopp etc???
 8154c898
 8154c8a4
 8154c8c0
-8154cce4	storlek...
+8154cce4 size ...
 8154ccec
 8154ccf4
 8154cd40
@@ -892,21 +892,21 @@ kommer man till 80056cf0 på marken efter hopp etc???
 
 
 #resetta gravityn
-802b5760	körs när man dör ELLER klarar banan!!!
-		...eller om man bara tar upp avbryt-menyn... ajja...
-816117bc	storlek på koopa som visar dödhet i slutet
+802b5760 is run when you die OR clear the path !!!
+... or if you just bring up the cancel menu ... well ...
+816117bc size of koopa showing deadness at the end
 
 
 
 
-VUXENVÄRDEN I 802f531c!!!
-802f5aa0???????
+ADULTS IN 802f531c !!!
+802f5aa0 ???????
 
 
-80142dd4	storear i 8154c898
+80142dd4 store in 8154c898
 
 
-80055074	storear i 8154b8f0 när man hoppat på ett block
+80055074 storages in 8154b8f0 when jumping on a block
 
 80054f98
 
@@ -914,73 +914,73 @@ VUXENVÄRDEN I 802f531c!!!
 
 
 
-800b57a8	f6 eller f2 har zone??
-		
+800b57a8 f6 or f2 has zone ??
 
 
-800c9650	dimmar startgrejen..
 
-80004680	samma..?  (80004600)
+800c9650 dims the starter gear ..
+
+80004680 same ..? (80004600)
 
 
 8091f170
 
 
 
-80d25d94	408.704010?
+80d25d94 408.704010?
 
 
-pausa i 0x80064F50, kolla r3+0x520 och r3+0x510
-		-3064 i tower, 3121 orig, 640 i tower, 608 i orig
-		
-
-eller r3+0x98??
-		-640 i lvl3
+pause in 0x80064F50, check out r3 + 0x520 and r3 + 0x510
+-3064 in tower, 3121 orig, 640 in tower, 608 in orig
 
 
-815e36e8	256, 7360, -448, -768 i lvl3!!
-		r9-0xd8c...
+or r3 + 0x98 ??
+-640 in lvl3
 
 
-
-när 80031ab0 körs, dvs kill mario:
-r0		00000000
-r1		8043fd18
-r2		80433360
-r3		81541808
-r4		8154b804
-r5		8154b94c
-r6		8043fd00
-r7		00000000
-r8		41000000
-r9		00000000
-r10		00000001
-r11		8043fce8
-r12		80031ab0
-r13		8042f980
-r14-r18		00000000
-r19		00000008
-r20		00000000
-r21		40e00000
-r22		40800000
-r23		8154b94c
-r24		81541950
-r25-r27		00000001
-r28		81541808
-r29		81541950
-r30		81541808
-r31		8154b804
-
-
-när JAG kör 80031ab0:
-r28		8154b9f0
-r29		8154b804
+815e36e8 256, 7360, -448, -768 in lvl3 !!
+r9-0xd8c ...
 
 
 
-!!!!!!HEELT NY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+when 80031ab0 is run, ie kill mario:
+r0 00000000
+R1 8043fd18
+r2 80433360
+R3 81541808
+r4 8154b804
+R5 8154b94c
+R6 8043fd00
+R7 00000000
+r8 41000000
+R9 00000000
+r10 00000001
+R11 8043fce8
+R12 80031ab0
+R13 8042f980
+r14-r18 00000000
+R 19 00000008
+r20 00000000
+R21 40e00000
+R 22 40800000
+R23 8154b94c
+R 24 81541950
+r25-r27 00000001
+r28 81541808
+R 29 81541950
+r30 81541808
+R31 8154b804
+
+
+when I run 80031ab0:
+R28 8154b9f0
+R29 8154b804
+
+
+
+!!!!!!!!!! NEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 #store zone's max y value to 0x80001910
@@ -988,24 +988,24 @@ i 80064f50:
 b (0x80001cb0-0x80064f50)
 
 i 80001cb0:
-stwu sp, -0x40(sp)	#orig
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
+stwu sp, -0x40 (sp) #orig
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
 
 
-cmpwi r9, 0 #sometimes r9 is zero for some reason..
+cmpwi r9, 0 #sometimes r9 is zero for some reason ..
 beq .exit
-lfs f12, -0xd88(r9) #read in max y
+lfs f12, -0xd88 (r9) #read in max y
 
 lis r5, 0x8000
 ori r5, r5, 0x1910
-stfs f12, 0x0(r5)
+stfs f12, 0x0 (r5)
 
 .exit:
-lwzu r5, 0(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
-b -(0x80001cb0-0x80064f50)-12*4+4
+lwzu r5, 0 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
+b - (0x80001cb0-0x80064f50) -12 * 4 + 4
 
 
 
@@ -1016,66 +1016,66 @@ b (0x80001cb0-0x8006f7b4)
 
 
 i 80001cb0:
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
 
 lis r5, 0x8000
 ori r5, r5, 0x1900
-lwz r4, 0x0(r5)
+lwz r4, 0x0 (r5)
 
 cmpwi r4, 0
 beq .exit
 
-#else, see if mario is at top!!
-lbz r4, 0x88(r3)	#should be 4!
+#else, see if mario is at top !!
+lbz r4, 0x88 (r3) #should be 4!
 cmpwi r4, 0
 beq .exit
 
-#else, add to f1 and store 0 to 0x88(r3)!
+#else, add to f1 and store 0 to 0x88 (r3)!
 lis r5, 0x8042
 ori r5, r5, 0xbb44
-lfs f3, 0x0(r5)
+lfs f3, 0x0 (r5)
 fadds f1, f1, f3
 fadds f1, f1, f3
 fadds f1, f1, f3
 li r4, 0
-stb r4, 0x88(r3)
+stb r4, 0x88 (r3)
 
 
 .exit:
 fcmpo cr0, f1, f0
-lwzu r5, 0(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
-b -(0x80001cb0-0x8006f7b4)-17*4+4
+lwzu r5, 0 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
+b - (0x80001cb0-0x8006f7b4) -17 * 4 + 4
 
 
 
 
 
 #resets gravity at death
-#WRONG!!! especially for multiplayer.. move to drawworldmap again..
-#OR 802b5760 (innan 8013dc40)
+#WRONG !!! especially for multiplayer .. move to drawworldmap again ..
+#OR 802b5760 (before 8013dc40)
 #drawworldmap at 80926770
-#NO! reset at 8091f170!
+#No! reset at 8091f170!
 
 i 8091f170:
 b (0x80001b20-0x8091f170)
 
 
 i 80001b20:
-stwu sp, -0x10(sp)	#orig
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
+stwu sp, -0x10 (sp) #orig
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
 li r4, 0
 lis r5, 0x8000
 ori r5, r5, 0x1900
-stw r4, 0x0(r5)
+stw r4, 0x0 (r5)
 
-lwzu r5, 0(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
-b -(0x80001b20-0x8091f170)-10*4+4
+lwzu r5, 0 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
+b - (0x80001b20-0x8091f170) -10 * 4 + 4
 
 
 
@@ -1086,29 +1086,29 @@ b (0x80001800-0x800b07ec)
 
 
 i 80001800:
-lfs f1, 0x70(r3)	#orig
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
+lfs f1, 0x70 (r3) #orig
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
 
 lis r5, 0x8000
 ori r5, r5, 0x1900
-lwz r4, 0x0(r5)
+lwz r4, 0x0 (r5)
 cmpwi r4, 0x0
 beq .exit
 
 #otherwise, upside down!
 
-fcmpo cr0, f1, f0	#f0 = 0
+fcmpo cr0, f1, f0 # f0 = 0
 ble- .exit
 
 #else, fneg f1
 fneg f1, f1
 
 .exit
-lwzu r5, 0(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
-b -(0x80001800-0x800b07ec)-14*4+4
+lwzu r5, 0 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
+b - (0x80001800-0x800b07ec) -14 * 4 + 4
 
 
 
@@ -1118,12 +1118,12 @@ i 80128254:
 b (0x80001990-0x80128254)
 
 
-i 80001990:
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
+in 80001990:
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
 lis r5, 0x8000
 ori r5, r5, 0x1900
-lwz r4, 0x0(r5)
+lwz r4, 0x0 (r5)
 cmpwi r4, 0x0
 beq .exit
 
@@ -1131,11 +1131,11 @@ beq .exit
 fneg f1, f1
 
 .exit:
-stfs f1, 0xec(r29) #orig!
-lwzu r5, 0(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
-b -(0x80001990-0x80128254)-12*4+4
+stfs f1, 0xec (r29) #orig!
+lwzu r5, 0 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
+b - (0x80001990-0x80128254) -12 * 4 + 4
 
 
 
@@ -1144,19 +1144,19 @@ i 801c0d1c:
 b (0x802f6740-0x801c0d1c)
 
 i 802f6740:
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
 lis r5, 0x8000
 ori r5, r5, 0x1900
-lwz r4, 0x0(r5)
+lwz r4, 0x0 (r5)
 cmpwi r4, 0x0
 beq .exit
 
 lis r5, 0x8042
 ori r5, r5, 0xbb44
-cmpwi r31, 0 #check for null pointer!
+cmpwi r31, 0 #check for null pointers!
 beq .exit
-cmpwi r3, 0 #check for null pointer!
+cmpwi r3, 0 #check for null pointers!
 beq .exit
 
 #check if r31 really is an addr
@@ -1164,101 +1164,101 @@ lis r4, 0x8200
 cmpw r31, r4
 bge .exit
 
-lis r4, 0x8150	#all(?) actors reside in 0x815xxxxx
+lis r4, 0x8150 #all (?) actors reside in 0x815xxxxx
 cmpw r31, r4
-ble .exit
+became .exit
 
 
-lbz r4, 0x9(r31) #read type of actor (if actor!)
-cmpwi r4, 0x33	#goomba
+lbz r4, 0x9 (r31) #read type of actor (if actor!)
+cmpwi r4, 0x33 #goomba
 beq .move_goomba
-cmpwi r4, 0x85  #bobomb
+cmpwi r4, 0x85 #bobomb
 beq .move_goomba
-cmpwi r4, 0x86  #para bobomb
+cmpwi r4, 0x86 #para bobomb
 beq .move_goomba
-cmpwi r4, 0x36	#koopa
+cmpwi r4, 0x36 #koopa
 beq .move_koopa
 
 #otherwise, exit
 b .exit
 
 .move_koopa:
-lfs f1, 0x70(r5) #6.0
+lfs f1, 0x70 (r5) # 6.0
 fadds f2, f2, f1
 fadds f2, f2, f1
-#f2 = 12.0
+# f2 = 12.0
 b .exit
 
 .move_goomba:
-lfs f1, 0x70(r5) #6.0
+lfs f1, 0x70 (r5) # 6.0
 fadds f2, f2, f1
-lfs f1, 0x10(r5) #1.0
+lfs f1, 0x10 (r5) # 1.0
 fsubs f2, f2, f1
-#f2 = 5.0
+# f2 = 5.0
 
 .exit:
-stfs f2, 0x1c(r3)
-lwzu r5, 0(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
-b -(0x802f6740-0x801c0d1c)-37*4+4
+stfs f2, 0x1c (r3)
+lwzu r5, 0 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
+b - (0x802f6740-0x801c0d1c) -37 * 4 + 4
 
 
 
 
 
-#handle y speed for actors, change
-#gravity on them here! also flip them
-i 8006cde0:
+#handle and speed for actors, change
+#gravity on them here! so flip them
+in 8006cde0:
 b (0x802f6908-0x8006cde0)
 
 
 i 802f6908:
-lfs f2, 0xec(r3)	#orig
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
+lfs f2, 0xec (r3) #orig
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
 
 lis r5, 0x8000
-ori r5,r5,0x1900
-lwz r4, 0(r5)
+ori r5, r5,0x1900
+lwz r4, 0 (r5)
 cmpwi r4, 0
 beq .inactive
 
 #active here, positive gravity to actor plix
 lis r4, 0x4080
-stw r4, 0xf8(r3)
+stw r4, 0xf8 (r3)
 #flip upside down
 lis r4, 0x8000
-stw r4, 0x104(r3)
+stw r4, 0x104 (r3)
 b .exit
 
 #fix offset!
 lis r5, 0x8042
-ori r5,r5,0xbb44
-lfs f1, 0xb0(r3) #read y pos
-lfs f0, 0x0(r5)
+ori r5, r5,0xbb44
+lfs f1, 0xb0 (r3) #read y pos
+lfs f0, 0x0 (r5)
 fadds f1, f1, f0
 fadds f1, f1, f0
-stfs f1, 0x98(r3)
+stfs f1, 0x98 (r3)
 b .exit
 
 .inactive:
 #store normal gravity to actor
 lis r4, 0xC080
-stw r4, 0xf8(r3)
+stw r4, 0xf8 (r3)
 #flip right way
 lis r4, 0x0000
-stw r4, 0x104(r3)
+stw r4, 0x104 (r3)
 
 .exit:
-lwzu r5, 0(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
-b -(0x802f6908-0x8006cde0)-27*4+4
+lwzu r5, 0 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
+b - (0x802f6908-0x8006cde0) -27 * 4 + 4
 
 
 
-<memory offset="0x8004c5bc" value="482AA244" />
+<memory offset = "0x8004c5bc" value = "482AA244" />
 
 #fix jump?
 i 8004c5bc:
@@ -1266,14 +1266,14 @@ b (0x802f6800-0x8004c5bc)
 
 
 i 802f6800:
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
-stwu r6, -0x4(sp)	#spara r6
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
+stwu r6, -0x4 (sp) # save r6
 
 #check gravity
 lis r5, 0x8000
-ori r5,r5,0x1900
-lwz r4, 0x0(r5)
+ori r5, r5,0x1900
+lwz r4, 0x0 (r5)
 
 cmpwi r4, 0
 bne .active
@@ -1284,27 +1284,27 @@ ble- .jumpaway
 b .exit
 
 .active:
-fneg f1,f1
+fneg f1, f1
 fcmpo cr0, f0, f1
-fneg f1,f1
+fneg f1, f1
 bge- .jumpaway
 b .exit
 
 .jumpaway:
-lwzu r6, 0(sp)
-lwzu r5, 4(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
-b -(0x802f6800-0x8004c5bc)-20*4+4*12
+lwzu r6, 0 (sp)
+lwzu r5, 4 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
+b - (0x802f6800-0x8004c5bc) -20 * 4 + 4 * 12
 
 
 .exit:
-lwzu r6, 0(sp)
-lwzu r5, 4(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
+lwzu r6, 0 (sp)
+lwzu r5, 4 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
 
-b -(0x802f6800-0x8004c5bc)-25*4+4+4
+b - (0x802f6800-0x8004c5bc) -25 * 4 + 4 + 4
 
 
 
@@ -1315,14 +1315,14 @@ b (0x802f6d00-0x8005714c)
 
 
 i 802f6d00:
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
-stwu r6, -0x4(sp)	#spara r6
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
+stwu r6, -0x4 (sp) # save r6
 
 #check gravity
 lis r5, 0x8000
-ori r5,r5,0x1900
-lwz r4, 0x0(r5)
+ori r5, r5,0x1900
+lwz r4, 0x0 (r5)
 
 fabs f28, f0
 fabs f31, f29
@@ -1330,26 +1330,26 @@ fabs f31, f29
 #cmpwi r4, 0
 #bne .active
 
-#.inactive:
+# .Inactive:
 #fcmpo cr0, f0, f29
-#bge- .exit
+# bge- .exit
 #b .else
 
-#.active:
+# .Active:
 fcmpo cr0, f28, f31
 ble- .exit
 
 .else:
-stfs f29, 0xec(r30)
+stfs f29, 0xec (r30)
 
 .exit:
-lfs f31, 0x4(r5) #zero to f31
-lwzu r6, 0(sp)
-lwzu r5, 4(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
+lfs f31, 0x4 (r5) #zero to f31
+lwzu r6, 0 (sp)
+lwzu r5, 4 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
 
-b -(0x802f6d00-0x8005714c)-16*4+4+4
+b - (0x802f6d00-0x8005714c) -16 * 4 + 4 + 4
 
 
 
@@ -1359,14 +1359,14 @@ b (0x802f6c00-0x8012771c)
 
 
 i 802f6c00:
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
-stwu r6, -0x4(sp)	#spara r6
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
+stwu r6, -0x4 (sp) # save r6
 
 #read status of gravity from 80001900
 lis r5, 0x8000
-ori r5,r5,0x1900
-lwz r4, 0x0(r5)
+ori r5, r5,0x1900
+lwz r4, 0x0 (r5)
 
 cmpwi r4, 0
 beq .exit
@@ -1374,50 +1374,50 @@ beq .exit
 .active:
 #set bbb8 to -2.0
 lis r6, 0x8042
-ori r6,r6,0xbbb8
+ori r6, r6,0xbbb8
 
 lis r4, 0xc000
-stw r4, 0x0(r6)
+stw r4, 0x0 (r6)
 
 fneg f1, f1
 
 
-#lfs f3, -0x74(r6) #4.0
-#lfs f4, 0xb0(r31) #mario.y
+#lfs f3, -0x74 (r6) # 4.0
+#lfs f4, 0xb0 (r31) # mario.y
 #fsubs f4, f4, f3
 #fsubs f4, f4, f3
 #fsubs f4, f4, f3
-#stfs f4, 0xb0(r31) #move!
-##NO PLEASE DON'T
-##also set 10d4 to 0!!
+#stfs f4, 0xb0 (r31) #move!
+## NO PLEASE DON'T
+## also set 10d4 to 0 !!
 #lis r4, 0x0
-#stw r4, 0x10d4(r31)
+#stw r4, 0x10d4 (r31)
 
 .exit:
 #store speed to marios speed
-stfs f1, 0xec(r31)
-lwzu r6, 0(sp)
-lwzu r5, 4(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
+stfs f1, 0xec (r31)
+lwzu r6, 0 (sp)
+lwzu r5, 4 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
 
-b -(0x802f6c00-0x8012771c)-24*4+4
+b - (0x802f6c00-0x8012771c) -24 * 4 + 4
 
 
 
 #hmmm? jump thing?
-i 80057104:
+in 80057104:
 b (0x802f6b00-0x80057104)
 
 i 802f6b00:
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
-stwu r6, -0x4(sp)	#spara r6
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
+stwu r6, -0x4 (sp) # save r6
 
 #read status from 80001900
 lis r5, 0x8000
-ori r5,r5,0x1900
-lwz r4, 0x0(r5)
+ori r5, r5,0x1900
+lwz r4, 0x0 (r5)
 
 cmpwi r4, 0
 beq .inactive
@@ -1432,12 +1432,12 @@ b .exit
 fsubs f0, f1, f0
 
 .exit:
-lwzu r6, 0(sp)
-lwzu r5, 4(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
+lwzu r6, 0 (sp)
+lwzu r5, 4 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
 
-b -(0x802f6b00-0x80057104)-18*4+4
+b - (0x802f6b00-0x80057104) -18 * 4 + 4
 
 
 
@@ -1447,198 +1447,198 @@ b (0x802f69a0-0x800e453c)
 
 
 i 802f69a0:
-addi r11, sp, 32	#orig!
-stwu r4, -0x4(sp)	#spara r4
-stwu r5, -0x4(sp)	#spara r5
-stwu r6, -0x4(sp)	#spara r6
+addi r11, sp, 32 #orig!
+stwu r4, -0x4 (sp) # save r4
+stwu r5, -0x4 (sp) # save r5
+stwu r6, -0x4 (sp) # save r6
 
 lis r5, 0x8000
-ori r5,r5,0x1900
+ori r5, r5,0x1900
 
-#here, r0=0 if disable, else r0=0x10 to enable
+#here, r0 = 0 if disable, else r0 = 0x10 to enable
 
 .store:
-stw r0, 0x0(r5)
+stw r0, 0x0 (r5)
 
 cmpwi r0, 0x10
 bne .exit
 
 #else, flip gravity!
 lis r6, 0x8042
-ori r6,r6,0xbb44
+ori r6, r6,0xbb44
 lis r4, 0x4080
-stw r4, 0x0(r6)
+stw r4, 0x0 (r6)
 
 
 
 .exit:
-lwzu r6, 0(sp)
-lwzu r5, 4(sp)
-lwzu r4, 4(sp)
-addi sp,sp,4
+lwzu r6, 0 (sp)
+lwzu r5, 4 (sp)
+lwzu r4, 4 (sp)
+addi sp, sp, 4
 
-b -(0x802f69a0-0x800e453c)-11*4+4
-
-
-
-<memory offset="0x80070ef4" value="482883A8" />
+b - (0x802f69a0-0x800e453c) -11 * 4 + 4
 
 
 
-#is run often???
-#game loop kinda
-i 80070ef4:
+<memory offset = "0x80070ef4" value = "482883A8" />
+
+
+
+#is run often ???
+#game runs kinda
+in 80070ef4:
 b (0x80001e40-0x80070ef4)
 
 
 #i 802f929c:
 i 80001e40:
-mflr r0			#orig
+mflr r0 #orig
 
 lis r5, 0x8000
-ori r5,r5,0x1900
+ori r5, r5,0x1900
 
-stw r3, 0x20(r5)
-stw r4, 0x24(r5)
-stw r5, 0x28(r5)
-stw r6, 0x2c(r5)
-stw r7, 0x30(r5)
-stw r8, 0x34(r5)
-stw r9, 0x38(r5)
-stw r10, 0x3c(r5)
-stw r11, 0x40(r5)
-stw r12, 0x44(r5)
+stw r3, 0x20 (r5)
+stw r4, 0x24 (r5)
+stw r5, 0x28 (r5)
+stw r6, 0x2c (r5)
+stw r7, 0x30 (r5)
+stw r8, 0x34 (r5)
+stw r9, 0x38 (r5)
+stw r10, 0x3c (r5)
+stw r11, 0x40 (r5)
+stw r12, 0x44 (r5)
 
 
 lis r6, 0x8042
 ori r6, r6, 0xbb44
 
-lwz r4, 0x0(r5)
+lwz r4, 0x0 (r5)
 lis r5, 0x802f
-ori r5,r5,0x6900
+ori r5, r5,0x6900
 cmpwi r4, 0
 beq .normalgravity
 
 #else, flip gravity!
 #also check if dead!
 lis r4, 0x4080
-stw r4, 0(r6)
-stw r4, 0xf8(r30)
+stw r4, 0 (r6)
+stw r4, 0xf8 (r30)
 
-#store 4 to super special value!!
-lis r4, 0x4080	#4.0
-stw r4, -0x5e40(r5)
+#store 4 to super special value !!
+lis r4, 0x4080 # 4.0
+stw r4, -0x5e40 (r5)
 
 #store pound gravity as well!
-lis r4, 0x40C0 #6.0
-stw r4, 0x70(r6)
+lis r4, 0x40C0 # 6.0
+stw r4, 0x70 (r6)
 
-#store 0 at bbb8!!!!!
+#store 0 at bbb8 !!!!!
 lis r4, 0x0
-stw r4, 0x74(r6)
+stw r4, 0x74 (r6)
 
 
 #flip model
 lis r4, 0x8000
-stw r4, 0x104(r30)
+stw r4, 0x104 (r30)
 
 
 .checktop:
-#check if mario/player/enemy is at top:
-lbz r4, 0x274(r30)
+#check if mario / player / enemy is at top:
+lbz r4, 0x274 (r30)
 cmpwi r4, 0x00
 beq .killplayer_or_exit
 
 li r4, 0
-stw r4, 0x274(r30)
+stw r4, 0x274 (r30)
 
 .blrr:
 #else, set speed to 0, gravity to 0! and blr
 #also set 80054688 to 60000000
-#also set 8042bbb8 (r6+0x74) to 40000000
+#also set 8042bbb8 (r6 + 0x74) to 40000000
 #also set 8005714c to 41800008
 lis r4, 0x0
-stw r4, 0xec(r30)
-#stw r4, 0x0(r6) #no gravity
+stw r4, 0xec (r30)
+#stw r4, 0x0 (r6) #no gravity
 li r4, 0x3099
-stw r4, 0x10d4(r30)
+stw r4, 0x10d4 (r30)
 
 #set bbb8 to 2.0
 lis r4, 0x4000
-stw r4, 0x74(r6)
+stw r4, 0x74 (r6)
 
 lis r4, 0x6000
 lis r7, 0x8005
 ori r7, r7, 0x4688
-stw r4, 0(r7)
+stw r4, 0 (r7)
 lis r4, 0x4180
 ori r4, r4, 0x0008
-#stw r4, 0x2ac4(r7) #store 41800008 to 8005714c
+#stw r4, 0x2ac4 (r7) #store 41800008 to 8005714c
 
 
 .firstexit:
-#lwz r0, 0x14(sp)
-#lwzu r7, 0(sp)
-#lwzu r6, 4(sp)
-#lwzu r5, 4(sp)
-#lwzu r4, 4(sp)
-#lwzu r3, 4(sp)
-#addi sp,sp,4
+#lwz r0, 0x14 (sp)
+#lwzu r7, 0 (sp)
+#lwzu r6, 4 (sp)
+#lwzu r5, 4 (sp)
+#lwzu r4, 4 (sp)
+#lwzu r3, 4 (sp)
+#addi sp, sp, 4
 
 lis r5, 0x8000
-ori r5,r5,0x1900
+ori r5, r5,0x1900
 
-lwz r3, 0x20(r5)
-lwz r4, 0x24(r5)
-lwz r6, 0x2c(r5)
-lwz r7, 0x30(r5)
-lwz r8, 0x34(r5)
-lwz r9, 0x38(r5)
-lwz r10, 0x3c(r5)
-lwz r11, 0x40(r5)
-lwz r12, 0x44(r5)
+lwz r3, 0x20 (r5)
+lwz r4, 0x24 (r5)
+lwz r6, 0x2c (r5)
+lwz r7, 0x30 (r5)
+lwz r8, 0x34 (r5)
+lwz r9, 0x38 (r5)
+lwz r10, 0x3c (r5)
+lwz r11, 0x40 (r5)
+lwz r12, 0x44 (r5)
 
 mtlr r0
 addi sp, sp, 32
-blr
+BLR
 
 .normalgravity:
 #store normal gravity
 lis r4, 0xC080
-stw r4, 0(r6)
+stw r4, 0 (r6)
 
-#store 3 back to super special value!!
-lis r4, 0x4040	#3.0
-stw r4, -0x5e40(r5)
+#store 3 back to super special value !!
+lis r4, 0x4040 # 3.0
+stw r4, -0x5e40 (r5)
 
 #store pound gravity as well!
-lis r4, 0xC0C0 #6.0
-stw r4, 0x70(r6)
+lis r4, 0xC0C0 # 6.0
+stw r4, 0x70 (r6)
 
-stw r4, 0xf8(r30)
+stw r4, 0xf8 (r30)
 
 lis r4, 0xC000
-stw r4, 0x74(r6)
+stw r4, 0x74 (r6)
 
 #put mario model back the right way!
 lis r4, 0x0000
-stw r4, 0x104(r30)
+stw r4, 0x104 (r30)
 b .exit
 
 .killplayer_or_exit:
 #check if above zone!
 lis r4, 0x815e
 ori r4, r4, 0x36f0
-lfs f12, 0x0(r4)
-lfs f11, 0xb0(r30) #mario's y pos
-lwz r5, 0x0(r4)
+lfs f12, 0x0 (r4)
+lfs f11, 0xb0 (r30) # mario's y pos
+lwz r5, 0x0 (r4)
 cmpwi r5, 0
 beq .exit
 
 fcmpo cr0, f11, f12
-bge .kill_player
+both .kill_player
 
-b .exit #<---
+b .exit # <---
 
 .kill_player:
 mr r4, r30
@@ -1649,9 +1649,9 @@ lis r30, 0x8154
 ori r30, r30, 0x1808
 mr r3, r30
 
-stw r0, 0x54(sp)
+stw r0, 0x54 (sp)
 
-#80031ab0
+# 80031ab0
 #lis r12, 0x8003
 #ori r12, r12, 0x1ab0
 lis r12, 0x8014
@@ -1661,46 +1661,46 @@ mr r3, r4
 mtctr r12
 
 
-#r28		81541808
-#r29		81541950
+R28 # 81541808
+R29 # 81541950
 #lis r28, 0x8154
 #ori r28, r28, 0x1808
 #lis r29, 0x8154
 #ori r29, r29, 0x1950
 
-#make mario small so that he dies right away!
+#make mario small so he's right away!
 li r5, 0
-stw r5, 0x14e0(r3)
+stw r5, 0x14e0 (r3)
 
-bctrl	#jump to kill mario routine!
+bctrl #jump to kill mario routine!
 
-lwz r0, 0x54(sp)
+lwz r0, 0x54 (sp)
 mtlr r0 #move to lr again
 
 .exit:
-#lwzu r7, 0(sp)
-#lwzu r6, 4(sp)
-#lwzu r5, 4(sp)
-#lwzu r4, 4(sp)
-#lwzu r3, 4(sp)
-#addi sp,sp,4
+#lwzu r7, 0 (sp)
+#lwzu r6, 4 (sp)
+#lwzu r5, 4 (sp)
+#lwzu r4, 4 (sp)
+#lwzu r3, 4 (sp)
+#addi sp, sp, 4
 
 lis r5, 0x8000
-ori r5,r5,0x1900
+ori r5, r5,0x1900
 
 
-lwz r3, 0x20(r5)
-lwz r4, 0x24(r5)
-lwz r6, 0x2c(r5)
-lwz r7, 0x30(r5)
-lwz r8, 0x34(r5)
-lwz r9, 0x38(r5)
-lwz r10, 0x3c(r5)
-lwz r11, 0x40(r5)
-lwz r12, 0x44(r5)
+lwz r3, 0x20 (r5)
+lwz r4, 0x24 (r5)
+lwz r6, 0x2c (r5)
+lwz r7, 0x30 (r5)
+lwz r8, 0x34 (r5)
+lwz r9, 0x38 (r5)
+lwz r10, 0x3c (r5)
+lwz r11, 0x40 (r5)
+lwz r12, 0x44 (r5)
 mr r5, r6
 
-b -(0x80001e40-0x80070ef4)-113*4+4
+b - (0x80001e40-0x80070ef4) -113 * 4 + 4
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!
@@ -1712,14 +1712,14 @@ b -(0x80001e40-0x80070ef4)-113*4+4
 
 
 
-80056e40	svinlång rutin, lägger till hastighet etcetc
+80056e40 pig-long routine, adds speed etcetc
 
-80056f28	läser in acc i x-led..?
+80056f28 reads acc in x-led ..?
 
 8005714c: ble-?
-80057150: lagra max-värde i hastighet!
+80057150: store max value in speed!
 
-800570fc	läser in -0.34 och lägger till på hastigheten!
+800570fc loads -0.34 and adds to the speed!
 
 
 
@@ -1742,31 +1742,31 @@ b -(0x80001e40-0x80070ef4)-113*4+4
 80054a3c
 
 
-80376ca8	3.0, någon hastighet? max-hastighet i x?
-läses vid 8012763c
+80376ca8 3.0, any speed? max speed in x?
+is read at 8012763c
 
 
-prova att sätta hopphastigheten negativ:
+try to set the jump speed negative:
 
-80127710	40820008
-80127718	fc200850
+80127710 40820008
+80127718 fc200850
 
 
 
 8006dcd8
 8006db88
 
-prova:
-8007067c	90e300a0
-80070678	90e300a4
-80070680	60000000
+try:
+8007067c 90e300a0
+80070678 90e300a4
+80070680 60000000
 
 
-801ca7c0	convertpathtoentrynum
+801ca7c0 convertpathtoentrynum
 
-8016bd90	
+8016bd90
 8016bd70
 
-..taru.arc	barrel
+Barrel ..taru.arc
 
 801ca7d0
