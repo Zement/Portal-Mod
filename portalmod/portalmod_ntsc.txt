@@ -1,328 +1,327 @@
-
-MARIO modifierbara:
-8154b804	mario
-8154b910	hastighet i x
-8154b8f0	hastighet i y
-8154b8b4	läge i y-led
-8154b8b0	läge i x-led
-8154b904	vänster = 0000d000, höger = 00003000
-+0x38c		så man ej kan interagera etc!
-8154c6ac	nåt med hålla i
-8154c6b0	nåt med hålla i
-8154e27c	nåt med hålla i
-
-
-80095950	collision callback, gäller fiender, iaf goomba, verkar gälla fiender emellan också
-80095C20	player collision! körs när man krockar in i fiender, dock ej om man dödar dem, eller om man hoppar på taggiga
-80064d10	körs när fiender tas bort, t.ex. när man hoppat sönder en goomba
-80064350	beforeCreate stageactor, körs innan en ny actor skapas, r3 innehåller adress till början på dActor_c-klassen
-			kan användas till att göra en portalskjutare! körs när man kastar snö nämligen.
+MARIO modifiable:
+8154b804 Mario
+8154b910 speed in x
+8154b8f0 velocity in y
+8154b8b4 position in y-direction
+8154b8b0 position in x-joint
+8154b904 left = 0000d000, right = 00003000
++ 0x38c so you can't interact etc!
+8154c6ac something with hold
+8154c6b0 something with hold
+8154e27c something with hold
 
 
-80162C40	OBJECT CREATE!! bara fyll i r3 vilket slags objekt! körs när man kastar snöboll t.ex.
-
-objektnummer: (hex)
-33		goomba
-124		mini goomba
-36		koopa
-191		ett trött mynt...
-AE		tusenfoting
-90		sån stor svart sak
-87		mecha-koopa
-86		bobomb (para)
-85		vanlig bobomb
+80095950 collision callback, applies to enemies, iaf goomba, seems to apply to enemies as well
+80095C20 player collision! run when you crash into enemies, though not if you kill them, or if you jump on prickly
+80064d10 is run when enemies are removed, e.g. when you jumped a goomba
+80064350 beforeCreate stageactor, run before new actor is created, r3 contains address to start of dActor_c class
+can be used to make a portal slider! runs when throwing snow namely.
 
 
-81540320	koopa
+80162C40 OBJECT CREATE !! just fill in r3 what kind of item! run when throwing snowball eg.
+
+item number: (hex)
+33 goomba
+124 mini goomba
+36 koopa
+191 a tired coin ...
+AE centipede
+90 such a big black thing
+87 mecha-koopa
+86 bobomb (para)
+85 common bobomb
 
 
-81540d48	goomba
-81540fbc	0x00002000 på marken, 0 i luften, 0x04000000 om fast i tile :o
-81540fc4	1 om på marken, 0 i luften
-81540fc8	0 i luften, 0x000d0000 på marken
-81540fd4	0 i luften
-81540fd8	0x10100000 om i luften, etc
+81540320 koopa
 
 
-fast i tile där uppe:
-81540df4	44900000	x
-81540df8	c3ee5800	y
-
-slå i väggen där nere:
-81540df4	448f0000	x
-81540df8	c4190000	y
-
+81540d48 goomba
+81540fbc 0x00002000 in the field, 0 in the air, 0x04000000 if fixed in tile: o
+81540fc4 1 about in the field, 0 in the air
+81540fc8 0 in the air, 0x000d0000 in the field
+81540fd4 0 in the air
+81540fd8 0x10100000 about in the air, etc
 
 
-8006C580	beforeDelete, körs från 800327cc för goomba iaf
-8015fe80	
+fixed in tile up there:
+81540df4 44900000 x
+81540df8 c3ee5800 y
 
-80064540	beforeDraw__13dStageActor_cFv, r3 = adressen på en random fiende som ritas ut
-
-
-80095D30	prePlayerCollision! körs när man ska hoppa på goomba t.ex., r3=adress till fiende (tror jag), körs även när man krockar!!!
-
-r3+8		sorts fiende i övre 16 bit! 33=goomba, 57=spike top etc
-r3+0x100	rotation! i övre 16 bit!
-r3+0xe8		actorns hastighet i x-led
-r3+0xec		actorns hastighet i y-led
-r3+0xac		pos i x-led
-r3+0xb0		pos i y-led
-r3+0x124	is_visible
-r3+0xf8		gravity?
-r3+0x290	något om att man står på fötter?
-
-r3+0x274	krockar med någon tile om != 0!!!
+hit the wall down there:
+81540df4 448f0000 x
+81540df8 c4190000 y
 
 
-r3+0x5ec	tiden kvar på bomben!! sätt till 0 så sprängs den!
 
-8039f6a0	knappar nedtryckta, 24000000 = A, 28000000 = B?
+8006C580 beforeDelete, run from 800327cc for goomba iaf
+8015fe80
 
-##för den stora svarta!
-r3+0x5FC	pos i x
-r3+0x600	pos i y
-r3+0x5f8	hast. y
-
-		
-80162E40	Z13FindActorByIDj
-80162E90	findactorbytype
+80064540 beforeDraw__13dStageActor_cFv, r3 = the address of a random enemy drawn
 
 
-togezo.arc	taggiga gubbar
-met_toge.arc	taggig gubbe! använd denna som portal tack! 57 som ID!
-kuribo.arc	goomba!
-nokonokoX.arc	koopa!
-bombhei.arc	bob-omb
+80095D30 prePlayerCollision! run when you want to jump on goomba eg, r3 = address of the enemy (I think), run even when you crash !!!
 
+r3 + 8 kind of enemy in the upper 16 bit! 33 = goomba, 57 = spike top etc
+r3 + 0x100 Revolution! in the upper 16 bit!
+r3 + 0xe8 actuator speed in x-joint
+r3 + 0xec actuator speed in y-direction
+r3 + 0xac pos in x-led
+r3 + 0xb0 pos in y-joint
+r3 + 0x124 is_visible
+r3 + 0xf8 gravity?
+r3 + 0x290 something about standing on your feet?
+
+r3 + 0x274 crashes with some tile if! = 0 !!!
+
+
+r3 + 0x5ec time left on the bomb !! set to 0 and it blasts!
+
+8039f6a0 buttons pressed, 24000000 = A, 28000000 = B?
+
+## for the big black!
+r3 + 0x5FC pos i x
+r3 + 0x600 pos i y
+r3 + 0x5f8 hurry. y
+
+
+80162E40 Z13FindActorByIDj
+80162E90 findactorbytype
+
+
+togezo.arc spiky guys
+met_toge.arc tagged old man! use this as a portal please! 57 as ID!
+kuribo.arc goomba!
+nokonokoX.arc Koopa!
+bombhei.arc bob-OMB
 
 
 
 
-övergripande plan:
-i objectcreate, kolla om r3=isboll och ingen tidigare portal är skapad,
- om det är en isboll, ändra till någon fiende som ska agera portal (flygmössa?! :D)
 
-i beforecreate, kolla r3+nåt om det är fienden jag skapat, om det är det,
-spara ner adressen till den, och spara ner att första portalen är skapad
-sätt gravitation och x/y-speed till 0, flytta en bit ifrån mario så han ej skadas
+overall plan:
+in objectcreate, check if r3 = ice ball and no previous portal is created,
+ if it is an ice ball, change to any enemy to act portal (cap hat ?!: D)
 
-i något ställe som körs ofta, öka x-speed (så småningom x+y med cos och sin)
-medan adress till portalen+0x274 (lower 16 bit) inte är lika med 0.
+in beforecreate, check out r3 + something if it is the enemy i created, if it is,
+save the address to it, and save down that the first portal is created
+set gravity and x / y speed to 0, move away from mario so he is not injured
 
-i preplayercoll, kolla om r3=portal 1 eller 2, om 1, sätt hastigheter och positioner
-från portal 2, och vice versa. sätt skapad portal till 0, så en ny kan skapas.
+in some place that runs frequently, increase x-speed (eventually x + y with cos and sin)
+while the address of the portal + 0x274 (lower 16 bit) is not equal to 0.
+
+In preplayercoll, check if r3 = portal 1 or 2, if 1, set speeds and positions
+from portal 2, and vice versa. set created portal to 0, so a new one can be created.
 
 ------
-determinera orientation:
-när en portal fastnat, sätt något minnesvärde till 1, i gameloop kolla om orientation-minnesvärdet
-är == 0 säger vi, och maybeorientation också är ==0,isåfall kör determine_orientation som
-flyttar åt höger dx, sätter 1 i maybeorientation-minnesvärdet och exitar. när den körs nästa
-gång är maybe==1, kolla om den fortfarande är fastnad, isåfall ska den hoppa till portal_is_up_down_or_right
+determine orientation:
+when a portal is stuck, set some memory value to 1, in the gameloop check for orientation memory value
+is == 0 we say, and maybeorientation is also == 0, in that case run determine_orientation which
+moves to the right dx, puts 1 in the maybeorientation memory and exits. when it runs next
+time is maybe == 1, check if it is still stuck, in which case it should jump to portal_is_up_down_or_right
 
 -------
-på riktigt:
-orientation på vanliga tegelbitar, r3+0x274:
-vänster		0x00000014
-höger		0x00000028
-där uppe	0x04000000		HÄNGER UNDER ALLTSÅ
-där nere	0x00002000		STÅR PÅ ALLTSÅ, även 0x10 på +0x27c!
+for real:
+orientation on common brick pieces, r3 + 0x274:
+left 0x00000014
+right 0x00000028
+up there 0x04000000 HANGS BELOW THEN
+down there 0x00002000 STANDS THEN, even 0x10 at + 0x27c!
 -------
 
-inaktivera etc:
-i playercoll, sätt 1 i 802f691c i slutet, stäng av den och sätt
-till 0 i gameloop när den nått typ 2000 ~ .5 sek?
+disable etc:
+in playercoll, put 1 in 802f691c at the end, turn it off and set
+to 0 in gameloop when it reaches type 2000 ~ .5 sec?
 
 
 
-SPARA adress till PORTAL1 I 802f6800, PORTAL2 I 802f6804!
+SAVE address to PORTAL1 I 802f6800, PORTAL2 I 802f6804!
 
-kasta mynt istället för is, flytta efter skapande
-FUNKAR!!! ANVÄND ALDRIG 80bc0000!!!!
+Throw coins instead of ice, move after creation
+IT WORKS !!! NEVER USE 80bc0000 !!!!
 
-i adress 80162B00 (object create):
-b (0x802f6410-0x80162b00)		#hoppa till 802f6410
-
-
-i adress 80064350 (beforecreate): 
-b (0x802f6440-0x80064350)	#hoppa till 802f6440
+at address 80162B00 (object create):
+b (0x802f6410-0x80162b00) # jump to 802f6410
 
 
-i 802f6410:
-cmpwi r3, 0x68		#checka om isboll
+at address 80064350 (beforecreate):
+b (0x802f6440-0x80064350) # jump to 802f6440
+
+
+in 802f6410:
+cmpwi r3, 0x68 #check for ice ball
 bne .quit
-#här är isboll
-lis r18,0x8154
-ori r18,r18,0xba7b
-lbz r18,0(r18)
-cmpwi r18,0
+# here is ice ball
+lis r18.0x8154
+ori r18, r18,0xba7b
+lbz r18.0 (r18)
+cmpwi r18.0
 bne .quit
-li r3, 0x85		#ändra till bob-omb
+li r3, 0x85 # change to bob-omb
 .quit:
-cmpwi r4,0		#kör det som står i 80162c40!
-b -(0x802f6410-0x80162b00)-9*4+4
+cmpwi r4,0 # run what is in 80162c40!
+b - (0x802f6410-0x80162b00) -9 * 4 + 4
 
 
 i 802f6440:
-stwu r1,-16(r1)		#kör det som stod i 80064350
-stwu r5, -0x4(sp)	#spara r5
-stwu r6, -0x4(sp)	#spara r6
-stwu r7, -0x4(sp)	#spara r7
-stwu r8, -0x4(sp)	#spara r8
+stwu r1, -16 (r1) # runs what was in 80064350
+stwu r5, -0x4 (sp) # save r5
+stwu r6, -0x4 (sp) # save r6
+stwu r7, -0x4 (sp) # save r7
+stwu r8, -0x4 (sp) # save r8
 
-lwz r5, 8(r3)		#r5 = typ av fiende
-xoris r7,r5,0x0124
-cmpwi r7,0			#r5 = mini goomba
+lwz r5, 8 (r3) # r5 = type of enemy
+xoris r7, r5,0x0124
+cmpwi r7,0 # r5 = mini goomba
 #mtlr r0
 beq .load_mini_goombas
 
 .check_bobomb:
 lis r6,0x802f
-ori r6,r6,0x6600	#r6 = 0x802f6600
+ori r6, r6,0x6600 # r6 = 0x802f6600
 
-xoris r5,r5,0x0085	
-cmpwi r5, 0x0		#om r5 = bobomb
+xoris r5, r5,0x0085
+cmpwi r5, 0x0 #om r5 = bobomb
 bne .exit
 
 
-lwz r5,8(r6)		#r5 = 0/1/2
-cmpwi r5,0
+lwz r5.8 (r6) # r5 = 0/1/2
+cmpwi r5.0
 #beq .save_first_portal
 beq .store_a_1_and_exit
 
-cmpwi r5,2
+cmpwi r5.2
 beq .save_first_portal
 
 .save_second_portal:
-lwz r5,4(r6)
-cmpwi r5,0		#har det lagts någon innan?
+lwz r5.4 (r6)
+cmpwi r5,0 # has anyone posted before?
 beq .load_2
 
-#else, kill the previous one, mohaha (well, make it invisible..)
-lwz r7,4(r6)		#r7 = addr to bobomb
-cmpwi r7,0
+#else, kill the previous one, mohaha (well, make it invisible ..)
+lwz r7,4 (r6) # r7 = addr to bobomb
+cmpwi r7.0
 beq .exit
-lhz r5, 8(r7)		#make sure it's a bobomb
+lhz r5, 8 (r7) #make sure it's a bobomb
 cmpwi r5, 0x85
-bne .load_2
-lhz r5, 10(r7)		#make sure it's not gone
+open .load_2
+lhz r5, 10 (r7) #make sure it's not gone
 cmpwi r5, 2
 beq .load_2
 
-li r5,0
-stw r5, 0x124(r7)
+li r5.0
+stw r5, 0x124 (r7)
 
 .load_2:
 li r5,2
-stw r3,4(r6)		#spara ner adressen till portalen i 802f6904
+stw r3,4 (r6) #save down the address of the portal in 802f6904
 b .save_portal
 
 .save_first_portal:
-lwz r5,0(r6)
-cmpwi r5,0		#har det lagts någon innan?
+lwz r5.0 (r6)
+cmpwi r5,0 # has anyone posted before?
 beq .load_1
 
 #else, kill the previous one, mohaha
 
-lwz r7,0(r6)
-cmpwi r7,0
+lwz r7.0 (r6)
+cmpwi r7.0
 beq .exit
-lhz r5, 8(r7)		#make sure it's a bobomb
+lhz r5, 8 (r7) #make sure it's a bobomb
 cmpwi r5, 0x85
-bne .load_1
-lhz r5, 10(r7)		#make sure it's not gone
+open .load_1
+lhz r5, 10 (r7) #make sure it's not gone
 cmpwi r5, 2
 beq .load_1
 
-li r5,0
-stw r5, 0x124(r7)
+li r5.0
+stw r5, 0x124 (r7)
 
 .load_1:
-#check tot num of portals
-#lwz r5, 0x1c(r6)
-#addi r5,r5,1
-#stw r5, 0x1c(r6)
+#check to num or portals
+#lwz r5, 0x1c (r6)
+#addi r5, r5,1
+#stw r5, 0x1c (r6)
 #cmpwi r5,1
-#beq .exit			#first portal, exit!
+#beq .exit #first portal, exit!
 li r5,1
-stw r3,0(r6)		#spara ner adressen till portalen i 802f6600
+stw r3,0 (r6) #save down the address of the portal in 802f6600
 
 .save_portal:
-stw r5,8(r6)		#802f6908 = #portal
+stw r5,8 (r6) # 802f6908 = #portal
 
 .check_mario_direction:
-lwz r8, 0x74(r6)
-cmpwi r8,0
+lwz r8, 0x74 (r6)
+cmpwi r8.0
 beq .exit
-lwz r8, 0x70(r6)
-cmpwi r8,0
+lwz r8, 0x70 (r6)
+cmpwi r8.0
 beq .exit
 
-cmpwi r7,0
+cmpwi r7.0
 beq .exit
 
 lis r5,0x8154
-ori r5,r5,0xb904	#r5 = 0x8154b904, marios direction
-lwz r5, 0(r5)		#r5 = 0000d000 eller 00003000
-cmpwi r5,0x3000		
+ori r5, r5,0xb904 # r5 = 0x8154b904, marios direction
+lwz r5, 0 (r5) # r5 = 0000d000 or 00003000
+cmpwi r5,0x3000
 beq .save_right
 
 .save_left:
-lfs f8, 0x74(r6)	#f8 = cos(wiimotetilt)
-fneg f8,f8			#f8 = -cos(wiimotetilt)
-stfs f8, 0x84(r6)	#store -cos to update etc
-#stfs f8,0xe8(r7)	#hastx = -cos(wiimotetilt)
-lfs f8, 0x70(r6)	#f8 = sin(wiimotetilt)
-#fneg f8,f8
-stfs f8, 0x80(r6)	#store -sin to update etc
-#stfs f8,0xec(r7)	#hasty = -sin(wiimotetilt)
+lfs f8, 0x74 (r6) # f8 = cos (wiimotetilt)
+fneg f8, f8 # f8 = -cos (wiimotetilt)
+stfs f8, 0x84 (r6) #store -cos to update etc
+#stfs f8,0xe8 (r7) #hastx = -cos (wiimotetilt)
+lfs f8, 0x70 (r6) # f8 = sin (wiimotetilt)
+#fneg f8, f8
+stfs f8, 0x80 (r6) #store -sin to update etc
+#stfs f8,0xec (r7) #hasty = -sin (wiimotetilt)
 b .exit
 
 .save_right:
-lfs f8, 0x74(r6)	#f8 = cos(wiimotetilt)
-stfs f8, 0x84(r6)	#store it to update etc
-#stfs f8,0xe8(r7)	#hastx = cos(wiimotetilt)
-lfs f8, 0x70(r6)	#f8 = sin(wiimotetilt)
-stfs f8, 0x80(r6)	#store it to update etc
-#stfs f8,0xec(r7)	#hasty = sin(wiimotetilt)
+lfs f8, 0x74 (r6) # f8 = cos (wiimotetilt)
+stfs f8, 0x84 (r6) #store it to update etc
+#stfs f8,0xe8 (r7) #hastx = cos (wiimotetilt)
+lfs f8, 0x70 (r6) # f8 = sin (wiimotetilt)
+stfs f8, 0x80 (r6) #store it to update etc
+#stfs f8,0xec (r7) #hasty = sin (wiimotetilt)
 
 .exit:
-lwzu r8, 0(sp)
-lwzu r7, 4(sp)
-lwzu r6, 4(sp)
-lwzu r5, 4(sp)
-addi sp,sp,4
+lwzu r8, 0 (sp)
+lwzu r7, 4 (sp)
+lwzu r6, 4 (sp)
+lwzu r5, 4 (sp)
+addi sp, sp, 4
 
-b -(0x802f6440-0x80064350)-81*4+4
+b - (0x802f6440-0x80064350) -81 * 4 + 4
 
 .store_a_1_and_exit:
 li r5,1
-stw r5,0x8(r6)
+stw r5,0x8 (r6)
 b .exit
 
 
-.load_mini_goombas:	#lägg in 3 st mini-goombas i 0x802f6930 och framåt kanske?
-					#r3 = adressen till en mini-goomba
+.load_mini_goombas: # enter 3 mini-goombas in 0x802f6930 onwards maybe?
+# r3 = the address of a mini-goomba
 lis r6, 0x802f
-ori r6,r6,0x6630	#r6 = 0x802f6630
-lwz r7, 0(r6)		#r7 = adress till en mini-goomba alt. 0
-cmpwi r7,0			#fanns ingen goomba
+ori r6, r6,0x6630 # r6 = 0x802f6630
+lwz r7, 0 (r6) # r7 = address of a mini-goomba alt. 0
+cmpwi r7,0 # found no goomba
 bne .add_second
 
 .add_first:
-stw r3, 0x0(r6)
+stw r3, 0x0 (r6)
 b .exit_goomba
 
 .add_third:
-stw r3, 8(r6)		#add the third one
+stw r3, 8 (r6) #add the third one
 b .exit_goomba
 
 .add_second:
-lwz r7, 4(r6)		#adress till nästa goomba
-cmpwi r7, 0			#fanns ej där
+lwz r7, 4 (r6) #address to the next goomba
+cmpwi r7, 0 #not found there
 bne .add_third
-#annars lägg i andra
-stw r3, 4(r6)
+#one else put in others
+stw r3, 4 (r6)
 
 .exit_goomba:
 b .check_bobomb
@@ -330,316 +329,316 @@ b .check_bobomb
 
 
 
-game loop:
+game walk:
 
-i 800e39e4: (ställe som körs ofta, uppdaterar tid egentligen va?)
+in 800e39e4: (place that runs frequently, updates time really huh?)
 b (0x802f8bb8-0x800e39e4)
 
 
-#r7 ska hela tiden vara adressen till osv!
+# r7 should always be the address of etc!
 
 i 802f8bb8:
-lbz r0,10(r31)		#original-värde
-stwu r5, -0x4(sp)	#spara r5
-stwu r6, -0x4(sp)	#spara r6
-stwu r7, -0x4(sp)	#spara r6
-stwu r8, -0x4(sp)	#spara r6
+lbz r0.10 (r31) # original value
+stwu r5, -0x4 (sp) # save r5
+stwu r6, -0x4 (sp) # save r6
+stwu r7, -0x4 (sp) # save r6
+stwu r8, -0x4 (sp) # save r6
 
 b .draw_guidance
 
 .after_draw:
 lis r6,0x802f
-ori r6,r6,0x6600	#r6=0x802f6600, adress till portal1!
+ori r6, r6,0x6600 # r6 = 0x802f6600, portal1 address!
 
-#increase timer
-lwz r8,0x20(r6)
-addi r8,r8,1
-stw r8, 0x20(r6)
+#increase hours
+lwz r8.0x20 (r6)
+addi r8, r8.1
+stw r8, 0x20 (r6)
 
-lwz r7, 8(r6)		#vilken portal lade vi ut förra?
-cmpwi r7, 2			#var det två?
+lwz r7, 8 (r6) #What portal did we post last?
+cmpwi r7, 2 # were there two?
 beq .place_first_portal
 
 .place_second_portal:
-lwz r7, 0(r6)		#r7 = värdet i adressen
+lwz r7, 0 (r6) # r7 = the value in the address
 b .cont
 
 .place_first_portal:
-lwz r7, 4(r6)		#r7 = värdet i adressen
+lwz r7, 4 (r6) # r7 = the value in the address
 
 .cont:
-cmpwi r7,0			#if r7=0, then exit
+cmpwi r7,0 #if r7 = 0, then exit
 beq .exit
-lwz r5, 8(r7)		#r5 = typ av fiende
-xoris r5,r5,0x0085
-andis. r5,r5,0xffff
-cmpwi r5, 0x0		#om r5 = bobomb
-bne .exit			#exit if there wasn't a bobomb
-#yes, go to check if we can move
+lwz r5, 8 (r7) # r5 = type of enemy
+xoris r5, r5,0x0085
+andis. R5, r5,0xffff
+cmpwi r5, 0x0 #om r5 = bobomb
+bne .exit #exit if there wasn't a bobomb
+#yes, go check if we can move
 
 .checkifcanmove:
-lwz r5, 0x274(r7)	#r5 = 0 om vi kan röra på den
+lwz r5, 0x274 (r7) # r5 = 0 if we can touch it
 cmpwi r5, 0
 beq .move
 
-#.freeze:		#disable gravity and speed for both portals
+# .freeze: #disable gravity and speed for both portals
 #li r5, 0
-#stw r5, 0xf8(r7)	#gravity = 0
-#stw r5, 0xe8(r7)	#hastx = 0
-#stw r5, 0xec(r7)	#hasty = 0
+#stw r5, 0xf8 (r7) #gravity = 0
+#stw r5, 0xe8 (r7) #hastx = 0
+#stw r5, 0xec (r7) #hasty = 0
 
 
 #freeze first:
-lwz r5, 0(r6)		#r5 = addr to first portal
-cmpwi r5,0
+lwz r5, 0 (r6) # r5 = addr to first portal
+cmpwi r5.0
 beq .exit
-#lhz r8, 8(r5)
-#cmpwi r8, 0x85		#check that it's a bobomb
+#lhz r8, 8 (r5)
+#cmpwi r8, 0x85 #check that it's a bobomb
 #bne .exit
-lhz r8, 10(r5)		#2 if gone
+lhz r8, 10 (r5) # 2 if gone
 cmpwi r8, 2
 beq .exit
 
 li r8, 0
-stw r8, 0xf8(r5)	#gravity = 0
-stw r8, 0xe8(r5)	#hastx = 0
-stw r8, 0xec(r5)	#hasty = 0
+stw r8, 0xf8 (r5) #gravity = 0
+stw r8, 0xe8 (r5) #hastx = 0
+stw r8, 0xec (r5) #hasty = 0
 
 .freeze_second:
-lwz r5, 4(r6)		#r5 = addr to second portal
-cmpwi r5,0
+lwz r5, 4 (r6) # r5 = addr to second portal
+cmpwi r5.0
 beq .exit
-#lhz r8, 8(r5)
-#cmpwi r8, 0x85		#check that it's a bobomb
+#lhz r8, 8 (r5)
+#cmpwi r8, 0x85 #check that it's a bobomb
 #bne .exit
-lhz r8, 10(r5)		#2 if gone
+lhz r8, 10 (r5) # 2 if gone
 cmpwi r8, 2
 beq .exit
-li r8,0
-stw r8, 0xf8(r5)	#gravity = 0
-stw r8, 0xe8(r5)	#hastx = 0
-stw r8, 0xec(r5)	#hasty = 0
+li r8.0
+stw r8, 0xf8 (r5) #gravity = 0
+stw r8, 0xe8 (r5) #hastx = 0
+stw r8, 0xec (r5) #hasty = 0
 
 
 .check_orientation:
-lhz r5, 0x27c(r7)	#r5 = 0x01 om den står på marken
-cmpwi r5,0x01		#står på marken
+lhz r5, 0x27c (r7) # r5 = 0x01 if it is in the field
+cmpwi r5,0x01 # stands on the ground
 beq .store_down
 
 #else, check left
-lwz r5, 0x274(r7)	
-cmpwi r5,0x14		#hänger vänster
+lwz r5, 0x274 (r7)
+cmpwi r5,0x14 # hanging left
 beq .store_left
 
-cmpwi r5,0x28
+cmpwi r5.0x28
 beq .store_right
 
 #else, TODO check if up
-srawi r5,r5,24		#0x04000000 => 0x4
+srawi r5, r5.24 # 0x04000000 => 0x4
 cmpwi r5, 4
 b .store_up
 
 b .exit
 
 .move:
-lfs f8, 0x80(r6)	#f8 = sin(wiimotetilt) när det avfyrades
-lis r8, 0x40A0		#r8 = 5.0
-stw r8, 0xc(r6)
-lfs f5, 0xc(r6)
-fmuls f8,f8,f5
-stfs f8, 0xec(r7)	#hasty = 5*sin(wiimotetilt)
-lfs f8, 0x84(r6)	#f8 = cos(wiimotetilt) när det avfyrades
-fmuls f8,f8,f5
-stfs f8, 0xe8(r7)		#hastx = cos(wiimotetilt)
+lfs f8, 0x80 (r6) # f8 = sin (wiimotetilt) when fired
+lis r8, 0x40A0 # r8 = 5.0
+stw r8, 0xc (r6)
+lfs f5, 0xc (r6)
+fmuls f8, f8, f5
+stfs f8, 0xec (r7) #hasty = 5 * sin (wiimotetilt)
+lfs f8, 0x84 (r6) # f8 = cos (wiimotetilt) when fired
+fmuls f8, f8, f5
+stfs f8, 0xe8 (r7) #hastx = cos (wiimotetilt)
 
 .exit:
 
-lwzu r8, 0(sp)
-lwzu r7, 4(sp)
-lwzu r6, 4(sp)
-lwzu r5, 4(sp)
-addi sp,sp,4
-b -(0x802f8bb8-0x800e39e4)-73*4+4 	#n = antalet instr förutom denna
+lwzu r8, 0 (sp)
+lwzu r7, 4 (sp)
+lwzu r6, 4 (sp)
+lwzu r5, 4 (sp)
+addi sp, sp, 4
+b - (0x802f8bb8-0x800e39e4) -73 * 4 + 4 #n = number of instruments except this
 
 .store_down:
 li r8, 4
-stw r8, 0x300(r7)
-lwz r8, 0x100(r7)	#r8=rotation i övre 16 bit
-andis. r8,r8, 0x0000	#no rotation
-stw r8, 0x100(r7)	#store it back
+stw r8, 0x300 (r7)
+lwz r8, 0x100 (r7) # r8 = rotation in upper 16 bit
+andis. r8, r8, 0x0000 #no rotation
+stw r8, 0x100 (r7) #store it back
 b .exit
 
 .store_left:
 li r8, 3
-stw r8, 0x300(r7)
-lwz r8, 0x100(r7)	#r8=rotation i övre 16 bit
-andis. r8,r8, 0x0000	#clear rotation
-ori r8,r8, 0x4000	#rotate left
-oris r8,r8, 0xC000	#rotate left
-stw r8, 0x100(r7)	#store it back
+stw r8, 0x300 (r7)
+lwz r8, 0x100 (r7) # r8 = rotation in upper 16 bit
+andis. r8, r8, 0x0000 #clear rotation
+ori r8, r8, 0x4000 #rotate left
+oris r8, r8, 0xC000 #rotate left
+stw r8, 0x100 (r7) #store it back
 b .exit
 
 
 .store_up:
 li r8, 2
-stw r8, 0x300(r7)
-lwz r8, 0x100(r7)	#r8=rotation i övre 16 bit
-andis. r8,r8, 0x0000	#clear rotation
-oris r8,r8, 0x8000	#rotate up
-ori r8,r8, 0x8000	#rotate up
-stw r8, 0x100(r7)	#store it back
+stw r8, 0x300 (r7)
+lwz r8, 0x100 (r7) # r8 = rotation in upper 16 bit
+andis. r8, r8, 0x0000 #clear rotation
+oris r8, r8, 0x8000 #rotate up
+ori r8, r8, 0x8000 #rotate up
+stw r8, 0x100 (r7) #store it back
 b .exit
 
 
 .store_right:
 li r8, 1
-stw r8, 0x300(r7)
-lwz r8, 0x100(r7)	#r8=rotation i övre 16 bit
-andis. r8,r8, 0x0000	#clear rotation
-oris r8,r8, 0xC000	#rotate right
-ori r8,r8, 0xC000	#rotate right
-stw r8, 0x100(r7)	#store it back
+stw r8, 0x300 (r7)
+lwz r8, 0x100 (r7) # r8 = rotation in upper 16 bit
+andis. r8, r8, 0x0000 #clear rotation
+oris r8, r8, 0xC000 #rotate right
+ori r8, r8, 0xC000 #rotate right
+stw r8, 0x100 (r7) #store it back
 b .exit
 
 .discard_portal:
-li r8,0
-stw r8, 0(r7)
+li r8.0
+stw r8, 0 (r7)
 b .exit
 
 
-.cos:				#experimented to 1-x^2/2+x^3/12 = (x/12-1/2)*x^2+1, only from 0 to pi!
-#f8 = in-value
-fabs r8,r8			#r8 = |r8|
-lis r8, 0x4140		#r8 = 12.0
-stw r8,0x14(r6)
-lfs f5,0x14(r6)		#f5 = 12.0
-fdivs f5,f8,f5		#f5 = x/12
+.cos: #experimented to 1-x ^ 2/2 + x ^ 3/12 = (x / 12-1 / 2) * x ^ 2 + 1, only from 0 to pi!
+# f8 = in-value
+fabs r8, r8 # r8 = | r8 |
+lis r8, 0x4140 # r8 = 12.0
+stw r8.0x14 (r6)
+lfs f5,0x14 (r6) # f5 = 12.0
+fdivs f5, f8, f5 # f5 = x / 12
 
-lis r8, 0x3f00		#r8 = .5
-stw r8,0x14(r6)
-lfs f6,0x14(r6)		#f6 = .5
-fsubs f5,f5,f6		#f5 = x/12-1/2
-fmuls f8,f8,f8		#f8 = x^2
-fmuls f8,f8,f5		#f8 = x^2(x/12-1/2)
+lis r8, 0x3f00 # r8 = .5
+stw r8.0x14 (r6)
+lfs f6,0x14 (r6) # f6 = .5
+fsubs f5, f5, f6 # f5 = x / 12-1 / 2
+fmuls f8, f8, f8 # f8 = x ^ 2
+fmuls f8, f8, f5 # f8 = x ^ 2 (x / 12-1 / 2)
 
-lis r8, 0x3f80		#r8 = 1.0
-stw r8,0x14(r6)
-lfs f6,0x14(r6)		#f6 = 1.0
-fadds f8,f8,f6		#f8 = x^2(x/12-1/2)+1
+lis r8, 0x3f80 # r8 = 1.0
+stw r8.0x14 (r6)
+lfs f6,0x14 (r6) # f6 = 1.0
+fadds f8, f8, f6 # f8 = x ^ 2 (x / 12-1 / 2) +1
 #b .cont_move_right_cos
-blr
+BLR
 
-.sin:				#experimented to x-x^3/8 = x(1-x^2/8), -pi/2 to pi/2
-#f8 = in-value
-lis r8, 0x4100		#r8 = 8.0
-stw r8,0x14(r6)		
-lfs f6,0x14(r6)		#f6 = 8.0
-fmuls f5,f8,f8		#f5 = x^2
-fdivs f5,f5,f6		#f5 = x^2/8
+.sin: #experimented to x-x ^ 3/8 = x (1-x ^ 2/8), -pi / 2 to pi / 2
+# f8 = in-value
+lis r8, 0x4100 # r8 = 8.0
+stw r8.0x14 (r6)
+lfs f6,0x14 (r6) # f6 = 8.0
+fmuls f5, f8, f8 # f5 = x ^ 2
+fdivs f5, f5, f6 # f5 = x ^ 2/8
 
-lis r8, 0x3f80		#r8 = 1.0
-stw r8,0x14(r6)		
-lfs f6,0x14(r6)		#f6 = 1.0
-fsubs f6,f6,f5		#f6 = 1-x^2/8
-fmuls f8,f8,f6		#f8 = x(1-x^2/8)
+lis r8, 0x3f80 # r8 = 1.0
+stw r8.0x14 (r6)
+lfs f6,0x14 (r6) # f6 = 1.0
+fsubs f6, f6, f5 # f6 = 1-x ^ 2/8
+fmuls f8, f8, f6 # f8 = x (1-x ^ 2/8)
 #b .cont_move_right_sin
-blr
+BLR
 
 
 .draw_guidance:
 lis r6,0x802f
-ori r6,r6,0x6600
+ori r6, r6.0x6600
 
-lis r8,0x8076
-ori r8,r8,0x12c8	#r8 = addr to wiimote tilt!
+lis r8.0x8076
+ori r8, r8,0x12c8 # r8 = addr to wiimote tilt!
 
-lfs f8, 0(r8)		#f8 = tilt
-lis r8, 0x3fc9		#r8 ~ /2
-stw r8,0x14(r6)
-lfs f5,0x14(r6)		#f5 = pi/2
-fmuls f8,f8,f5		#f8 = wiimotetilt*pi/2
-stfs f8, 0x60(r6)	#store it into 802f6960
+lfs f8, 0 (r8) # f8 = tilt
+lis r8, 0x3fc9 # r8 ~ / 2
+stw r8.0x14 (r6)
+lfs f5,0x14 (r6) # f5 = pi / 2
+fmuls f8, f8, f5 # f8 = wiimotetilt * pi / 2
+stfs f8, 0x60 (r6) #store it into 802f6960
 
-#f8 = wiiangle*pi/2
-lwz r5, 0x30(r6)	#r5 = addr till mini goomba
-cmpwi r5,0
-beq .exit_from_draw_guidance		#om det ej var en goomba där, gitta
+# f8 = wiiangle * pi / 2
+lwz r5, 0x30 (r6) # r5 = addr to mini goomba
+cmpwi r5.0
+beq .exit_from_draw_guidance #if there wasn't a goomba there, gitta
 lis r7, 0x8154
-ori r7,r7,0xb804	#r7 = 0x8154b804
+ori r7, r7,0xb804 # r7 = 0x8154b804
 
 mtlr r0
 bl .cos
 
-#here f8=cos(wiimote)
-lwz r8, 0x100(r7)	#r8 = direction, d000/3000
-srawi r8,r8,12		#d / 3
+#here f8 = cos (wiimote)
+lwz r8, 0x100 (r7) # r8 = direction, d000 / 3000
+srawi r8, r8,12 #d / 3
 cmpwi r8, 0xd
 beq .draw_cos_left
 
 .draw_cos_right:
-stfs f8, 0x74(r6)	#store cos(wiimote) to 802f6974
-lis r8, 0x41F0		#r7 = 30.0
-stw r8, 0x14(r6)
-lfs f7, 0x14(r6)	#f7 = 30.0
-fmuls f7,f8,f7		#f7 = 30*cos(wiimote)
-lfs f5,0xac(r7)		#f5 = mario.x
-fadds f5,f5,f7		#f5 = mario.x + 30*cos(wiimote)
-stfs f5, 0xac(r5)	#lagra hos goomban
+stfs f8, 0x74 (r6) #store cos (wiimote) to 802f6974
+lis r8, 0x41F0 # r7 = 30.0
+stw r8, 0x14 (r6)
+lfs f7, 0x14 (r6) # f7 = 30.0
+fmuls f7, f8, f7 # f7 = 30 * cos (wiimote)
+lfs f5,0xac (r7) # f5 = mario.x
+fadds f5, f5, f7 # f5 = mario.x + 30 * cos (wiimote)
+stfs f5, 0xac (r5) #layer at goomban
 b .goto_sin
 
 .draw_cos_left:
-stfs f8, 0x74(r6)	#store cos(wiimote) to 802f6974
-lis r8, 0x41F0		#r7 = 30.0
-stw r8, 0x14(r6)
-lfs f7, 0x14(r6)	#f7 = 30.0
-fmuls f7,f8,f7		#f7 = 30*cos(wiimote)
-lfs f5,0xac(r7)		#f5 = mario.x
-fsubs f5,f5,f7		#f5 = mario.x - 30*cos(wiimote)
-stfs f5, 0xac(r5)	#lagra hos goomban
+stfs f8, 0x74 (r6) #store cos (wiimote) to 802f6974
+lis r8, 0x41F0 # r7 = 30.0
+stw r8, 0x14 (r6)
+lfs f7, 0x14 (r6) # f7 = 30.0
+fmuls f7, f8, f7 # f7 = 30 * cos (wiimote)
+lfs f5,0xac (r7) # f5 = mario.x
+fsubs f5, f5, f7 # f5 = mario.x - 30 * cos (wiimote)
+stfs f5, 0xac (r5) #layer at goomban
 
 .goto_sin:
-lfs f8, 0x60(r6)	#f8 = wiiangle*pi
+lfs f8, 0x60 (r6) # f8 = wiiangle * pi
 
-lwz r8, 0x100(r7)	#r8 = direction, d000/3000
-srawi r8,r8,12		#d / 3
+lwz r8, 0x100 (r7) # r8 = direction, d000 / 3000
+srawi r8, r8,12 #d / 3
 cmpwi r8, 0x3
 beq .draw_sin_left
 
 .draw_sin_right:
-fneg f8,f8
+fneg f8, f8
 nop
 
 .draw_sin_left:
 mtlr r0
-bl .sin
+page
 
-#here f8=sin(wiiangle)
-stfs r8, 0x70(r6)	#store sin(wiimote) to 802f6974
-lis r8, 0x41F0		#r7 = 30.0
-stw r8, 0x14(r6)
-lfs f7, 0x14(r6)	#f7 = 30.0
-fmuls f7,f8,f7		#f7 = 15*sin(wiimote)
-lfs f5,0xb0(r7)		#f5 = mario.y
+#here f8 = sin (wiiangle)
+stfs r8, 0x70 (r6) #store sin (wiimote) to 802f6974
+lis r8, 0x41F0 # r7 = 30.0
+stw r8, 0x14 (r6)
+lfs f7, 0x14 (r6) # f7 = 30.0
+fmuls f7, f8, f7 # f7 = 15 * sin (wiimote)
+lfs f5,0xb0 (r7) # f5 = mario.y
 
-#lwz r8, 0x100(r7)	#r8 = direction, d000/3000
-#srawi r8,r8,12		#d / 3
+#lwz r8, 0x100 (r7) # r8 = direction, d000 / 3000
+#srawi r8, r8,12 #d / 3
 #cmpwi r8, 0xd
 #beq .draw_sin_left
 
-#.draw_sin_right:
-fadds f7,f7, f5		#f7 = mario.y + 30*sin(wiiangle)
+# .Draw_sin_right:
+fadds f7, f7, f5 # f7 = mario.y + 30 * sin (wiiangle)
 #b .conttt
 
-#.draw_sin_left:
-#fsubs f7,f7, f5		#f7 = mario.y - 30*sin(wiiangle)
+# .Draw_sin_left:
+#fsubs f7, f7, f5 # f7 = mario.y - 30 * sin (wiiangle)
 
 
 .conttt:
-lis r8, 0x4170		#r7 = 15.0
-stw r8, 0x14(r6)
-lfs f5, 0x14(r6)	#f7 = 15.0
-fadds f7,f7, f5		#f7 = mario.y - 30*sin(wiiangle) + 15
-stfs f7, 0xb0(r5)	#store it etc
+lis r8, 0x4170 # r7 = 15.0
+stw r8, 0x14 (r6)
+lfs f5, 0x14 (r6) # f7 = 15.0
+fadds f7, f7, f5 # f7 = mario.y - 30 * sin (wiiangle) + 15
+stfs f7, 0xb0 (r5) #store it etc
 b .after_draw
 
 .exit_from_draw_guidance:
@@ -648,434 +647,434 @@ b .after_draw
 
 
 
-#i 80095D30: (preplayercollision, här ska vi teleporteras! wooh!)
+#i 80095D30: (preplayer collision, here we are teleported! wooh!)
 #b (0x802f8c60-0x80095d30)
 
 
 
 
-i 80095950: (collisioncallback, HÄR ska ALLA teleporteras!)
+in 80095950: (collision callback, HERE ALL teleports!)
 b (0x802f8960-0x80095950)
 
 
-#r28 = adress till mario eller vem det nu var som krockade(?)
-i 802f8960:
-stwu r1,-32(r1)		#ORIG I 80095950!
+# r28 = address to mario or who it was that crashed (?)
+in 802f8960:
+stwu r1, -32 (r1) #ORIG I 80095950!
 
-stwu r5, -0x4(sp)	#spara r5
-stwu r6, -0x4(sp)	#spara r6
-stwu r7, -0x4(sp)	#spara r7
-stwu r8, -0x4(sp)	#spara r8
-stwu r28, -0x4(sp)	#spara r28
-stwu r3, -0x4(sp)	#spara r3
+stwu r5, -0x4 (sp) # save r5
+stwu r6, -0x4 (sp) # save r6
+stwu r7, -0x4 (sp) # save r7
+stwu r8, -0x4 (sp) # save r8
+stwu r28, -0x4 (sp) # save r28
+stwu r3, -0x4 (sp) # save r3
 
-lwz r28, 4(r4)		#r28 = någon som krockar
-lwz r3, 4(r3)		#r3 = någon annan som krockar
+lwz r28, 4 (r4) # r28 = someone who crashes
+lwz r3, 4 (r3) # r3 = someone else crashing
 
 #check if r28 is a micro goomba, in that case, jump to exit
-lhz r5, 0x8(r28)
+lhz r5, 0x8 (r28)
 cmpwi r5, 0x124
 beq .exit
 
 #check if r3 is a micro goomba, in that case, jump to exit
-lhz r5, 0x8(r3)
+lhz r5, 0x8 (r3)
 cmpwi r5, 0x124
 beq .exit
 
 lis r5,0x802f
-ori r5,r5,0x6600	#r5 = 0x802f6600
+ori r5, r5,0x6600 # r5 = 0x802f6600
 
-lwz r6,0(r5)		#r6 = adress till första portalen
-sub r7,r6,r3		#r3 = addr of what could be a portal
-cmpwi r7,0			#samma adress!
-beq .teleport_to_2	#detta var första portalen, gå till andra
+lwz r6.0 (r5) # r6 = address of the first portal
+sub r7, r6, r3 # r3 = addr of what could be a portal
+cmpwi r7,0 # same address!
+beq .teleport_to_2 #this was the first portal, go to the second
 
 #otherwise, check if the other address was a portal
-lwz r6,4(r5)		#r6 = adress till andra portalen
-sub r7,r6,r3		
-cmpwi r7,0			#samma adress!
+lwz r6,4 (r5) # r6 = address of other portal
+sub r7, r6, r3
+cmpwi r7,0 # same address!
 bne .exit
 
 .teleport_to_1:
-lwz r6,0(r5)
+lwz r6.0 (r5)
 b .teleport_and_move_normalized
 
 .teleport_to_2:
-lwz r6,4(r5)
+lwz r6.4 (r5)
 
 .teleport_and_move_normalized:
-lwz r8, 0x20(r5)	#timer count
-cmpwi r8,20
-blt .exit			#om timer<20, hoppa till exit
+lwz r8, 0x20 (r5) #timer count
+cmpwi r8.20
+blt .exit #om timer <20, jump to exit
 
-#annars, reset timer och fortsätt
-li r8,0
-stw r8, 0x20(r5)
+# else, reset timer and continue
+li r8.0
+stw r8, 0x20 (r5)
 
-###normalize!!!###
-lfs f5, 0xe8(r28)	#xspeed
-lfs f6, 0xec(r28)	#yspeed
+### ### normalize !!!
+lfs f5, 0xe8 (r28) #xspeed
+lfs f6, 0xec (r28) #yspeed
 
-#set min speed etc
+#set my speed etc
 
-fmuls f7,f5,f5		#f7 = x^2
-fmuls f8,f6,f6		#f8 = y^2
-fadds f7,f7,f8		#f7 = x^2+y^2
+fmuls f7, f5, f5 # f7 = x ^ 2
+fmuls f8, f6, f6 # f8 = y ^ 2
+fadds f7, f7, f8 # f7 = x ^ 2 + y ^ 2
 
-#x/0 check!
-stfs f7, 0x18(r5)
-lwz r8, 0x18(r5)
-cmpwi r8,0
+# x / 0 check!
+stfs f7, 0x18 (r5)
+lwz r8, 0x18 (r5)
+cmpwi r8.0
 beq .after_sqrt
 
-frsqrte f7,f7		#f7 = 1/sqrt(x^2+y^2)
+frsqrte f7, f7 # f7 = 1 / sqrt (x ^ 2 + y ^ 2)
 
 .after_sqrt:
-fmuls f5,f5,f7		#f5 = xspeed/sqrt(x^2+y^2)
-fmuls f6,f6,f7		#f6 = yspeed/sqrt(x^2+y^2)
+fmuls f5, f5, f7 # f5 = xspeed / sqrt (x ^ 2 + y ^ 2)
+fmuls f6, f6, f7 # f6 = yspeed / sqrt (x ^ 2 + y ^ 2)
 
-lis r8,0x4120		#r8 = 10.0
-stw r8, 0xc(r5)
-lfs f8, 0xc(r5)
-fmuls f5,f5,r8		
-fmuls f6,f6,r8	
+lis r8,0x4120 # r8 = 10.0
+stw r8, 0xc (r5)
+lfs f8.0xc (r5)
+fmuls f5, f5, r8
+fmuls f6, f6, r8
 
-lfs f7, 0xac(r6)	#f7 = pos i x-led hos portalen
-#f5 = hast i x
-lis r8,0x40a0		#r8 = 5.0
-stw r8, 0xc(r5)
-lfs f8, 0xc(r5)
-fmuls f5,f5,r8		
-#fadds f7,f7,f5		#pos = pos+x_speed
-stfs f7, 0xac(r28)	#move mario to that x-pos
+lfs f7, 0xac (r6) # f7 = pos in x-joints of the portal
+# f5 = almost i x
+lis r8,0x40a0 # r8 = 5.0
+stw r8, 0xc (r5)
+lfs f8.0xc (r5)
+fmuls f5, f5, r8
+#fadds f7, f7, f5 #pos = pos + x_speed
+stfs f7, 0xac (r28) #move mario to that x-pos
 
-lfs f7, 0xb0(r6)	#f7 = pos i y-led hos portalen
-#f6 = hast i y
-#lfs f8,0xc(r5)
-#fmuls f6,f6,f8
-#fadds f7,f7,f6		#pos = pos+x_speed
-stfs r7, 0xb0(r28)	#move mario to that y-pos
+lfs f7, 0xb0 (r6) # f7 = pos in y-member of the portal
+# f6 = almost in y
+#lfs f8,0xc (r5)
+#fmuls f6, f6, f8
+#fadds f7, f7, f6 #pos = pos + x_speed
+stfs r7, 0xb0 (r28) #move mario to that y-pos
 
 
-#marios speed is normalized*5 in f5(x) and f6(y)
+#marios speed is normalized * 5 in f5 (x) and f6 (y)
 #now take care of speed mirroring
 
-lwz r6, 0(r5)		#portal 1
-lwz r7, 4(r5)		#portal 2
-cmpwi r6,0
-beq .exit			#no portal there, exit
-cmpwi r7,0
-beq .exit			#no portal there either, exit
+lwz r6, 0 (r5) #portal 1
+lwz r7, 4 (r5) #portal 2
+cmpwi r6.0
+beq .exit #no portal there, exit
+cmpwi r7.0
+beq .exit #no portal there either, exit
 #check that there are still portals at the addresses
-lhz r8, 8(r6)
-cmpwi r8, 0x85		#r8 = bobomb
+lhz r8, 8 (r6)
+cmpwi r8, 0x85 # r8 = bobomb
 bne .exit
-lhz r8, 8(r7)
-cmpwi r8, 0x85		#r8 = bobomb
+lhz r8, 8 (r7)
+cmpwi r8, 0x85 # r8 = bobomb
 bne .exit
 #check if portals are gone (out of frame)
-lhz r8, 10(r6)		#2 if gone
+lhz r8, 10 (r6) # 2 if gone
 cmpwi r8, 2
 beq .exit
-lhz r8, 10(r7)		#2 if gone
+lhz r8, 10 (r7) # 2 if gone
 cmpwi r8, 2
 beq .exit
 
-lwz r8,0x300(r6)	#r8 = portal1.orient
-lwz r5,0x300(r7)	#r5 = portal2.orient
-sub r5,r5,r8
-cmpwi r5,0		
-bne .not_same_orientation			#not the same orientation, do nothing
+lwz r8,0x300 (r6) # r8 = portal1.orient
+lwz r5,0x300 (r7) # r5 = portal2.orient
+sub r5, r5, r8
+cmpwi r5.0
+bne .not_same_orientation #not the same orientation, do nothing
 
 .same_orientation:
 #which orientation was it?
-cmpwi r8, 1			#right
+cmpwi r8, 1 #right
 beq .rightleft
 cmpwi r8, 3
 beq .rightleft
 
 #else, updown
 .updown:
-lfs f8, 0xec(r28)	#f8 = mario.yspeed
-fneg f8,f8
-stfs f8, 0xec(r28)	#mario.yspeed *= -1
-fneg f6,f6
-lfs f8, 0xb0(r28)	#f8 = mario.y
-fadds f8,f8,f6
-stfs f8, 0xb0(r28)	#f8 = mario.y+yspeed*5
+lfs f8, 0xec (r28) # f8 = mario.yspeed
+fneg f8, f8
+stfs f8, 0xec (r28) # mario.yspeed * = -1
+fneg f6, f6
+lfs f8, 0xb0 (r28) # f8 = mario.y
+fadds f8, f8, f6
+stfs f8, 0xb0 (r28) # f8 = mario.y + yspeed * 5
 b .exit
 
 .rightleft:
-lfs f8, 0x10c(r28)	#f8 = mario.xspeed
-fneg f8,f8
-stfs f8, 0x10c(r28)	#mario.xspeed *= -1
-fneg f5,f5
-lfs f8, 0xac(r28)	#f8 = mario.x
-fadds f8,f8,f6
-stfs f8, 0xac(r28)	#f8 = mario.x+xspeed*15
+lfs f8, 0x10c (r28) # f8 = mario.xspeed
+fneg f8, f8
+stfs f8, 0x10c (r28) # mario.xspeed * = -1
+fneg f5, f5
+lfs f8, 0xac (r28) # f8 = mario.x
+fadds f8, f8, f6
+stfs f8, 0xac (r28) # f8 = mario.x + xspeed * 15
 b .exit
 
 .not_same_orientation:
 #check if | _ or _ |
-lwz r8,0x300(r6)	#r8 = portal1.orient
-lwz r5,0x300(r7)	#r5 = portal2.orient
-sub r5,r5,r8
-cmpwi r5, 2			#motstående, bara fortsätt
-beq	.move_out		
-cmpwi r5,-2
+lwz r8,0x300 (r6) # r8 = portal1.orient
+lwz r5,0x300 (r7) # r5 = portal2.orient
+sub r5, r5, r8
+cmpwi r5, 2 # opposite, just keep going
+beq .move_out
+cmpwi r5, -2
 beq .move_out
 
-#| _ or _ | here
+# | _ or _ | here
 #check if 3 and 4/4 and 3
-lwz r8,0x300(r6)	#r8 = portal1.orient
-lwz r5,0x300(r7)	#r5 = portal2.orient
-sub r5,r5,r8
-cmpwi r5,1			#1 means it's either 4 and 3, 3 and 2, 2 and 1
+lwz r8,0x300 (r6) # r8 = portal1.orient
+lwz r5,0x300 (r7) # r5 = portal2.orient
+sub r5, r5, r8
+cmpwi r5,1 # 1 means it's either 4 and 3, 3 and 2, 2 and 1
 beq .check_4
-cmpwi r5,-1			#-1 means it's either 3 and 4, 2 and 3, 1 and 2
+cmpwi r5, -1 # -1 means it's either 3 and 4, 2 and 3, 1 and 2
 beq .check_4
 
 #here r5 must be 3 or -3, which means 1 and 4, jump to opposing and mirrored
 b .opposing_and_mirrored
 
-.check_4:			#if one is a 4, which means that the other must be 3, go to opposing
-lwz r8,0x300(r6)	#r8 = portal1.orient
-lwz r5,0x300(r7)	#r5 = portal2.orient
+.check_4: #if one is a 4, which means the other must be 3, go to opposing
+lwz r8,0x300 (r6) # r8 = portal1.orient
+lwz r5,0x300 (r7) # r5 = portal2.orient
 cmpwi r8, 4
 beq .opposing
 cmpwi r5, 4
 beq .opposing
 
 
-#only (1->2, 2->1) and (2->3, 3->2) left
-lwz r8,0x300(r6)	#r8 = portal1.orient
-lwz r5,0x300(r7)	#r5 = portal2.orient
+#only (1-> 2, 2-> 1) and (2-> 3, 3-> 2) left
+lwz r8,0x300 (r6) # r8 = portal1.orient
+lwz r5,0x300 (r7) # r5 = portal2.orient
 cmpwi r8, 3
 beq .opposing_and_mirrored
 cmpwi r5, 3
 beq .opposing_and_mirrored
-#else, (1->2, 2->1)
+#else, (1-> 2, 2-> 1)
 
 #else, not opposing nor mirrored, switch x and y:
 .opposing:
-lfs f8, 0x10c(r28)	#mario.xspeed
-lfs f6, 0xec(r28)	#mario.yspeed
-stfs f8, 0xec(r28)
-stfs f6, 0x10c(r28)
+lfs f8, 0x10c (r28) # mario.xspeed
+lfs f6, 0xec (r28) # mario.yspeed
+stfs f8, 0xec (r28)
+stfs f6, 0x10c (r28)
 b .exit
 
 .opposing_and_mirrored:
-lfs f8, 0x10c(r28)	#mario.xspeed
-lfs f6, 0xec(r28)	#mario.yspeed
-fneg f6,f6
-stfs f8, 0xec(r28)
-stfs f6, 0x10c(r28)
+lfs f8, 0x10c (r28) # mario.xspeed
+lfs f6, 0xec (r28) # mario.yspeed
+fneg f6, f6
+stfs f8, 0xec (r28)
+stfs f6, 0x10c (r28)
 
 .move_out:
-#lfs f8, 0xac(r28)	#f8 = mario.x
-#fadds f8,f8,f5
-#stfs f8, 0xac(r28)	#f8 = mario.x+xspeed*5
+#lfs f8, 0xac (r28) # f8 = mario.x
+#fadds f8, f8, f5
+#stfs f8, 0xac (r28) # f8 = mario.x + xspeed * 5
 
-#lfs f8, 0xb0(r28)	#f8 = mario.y
-#fadds f8,f8,f5
-#stfs f8, 0xb0(r28)	#f8 = mario.y+yspeed*5
+#lfs f8, 0xb0 (r28) # f8 = mario.y
+#fadds f8, f8, f5
+#stfs f8, 0xb0 (r28) # f8 = mario.y + yspeed * 5
 
 .exit:
-#sätt 1 i 802f691c
+# way 1 in 802f691c
 #li r8,1
-#stw r8, 0x1c(r5)
+#stw r8, 0x1c (r5)
 
-lwzu r3, 0(sp)
-lwzu r28, 4(sp)
-lwzu r8, 4(sp)
-lwzu r7, 4(sp)
-lwzu r6, 4(sp)
-lwzu r5, 4(sp)
-addi sp,sp,4
-b -(0x802f8960-0x80095950)-145*4+4 	#n = antalet instr förutom denna
-
-
+lwzu r3,0 (sp)
+lwzu r28, 4 (sp)
+lwzu r8, 4 (sp)
+lwzu r7, 4 (sp)
+lwzu r6, 4 (sp)
+lwzu r5, 4 (sp)
+addi sp, sp, 4
+b - (0x802f8960-0x80095950) -145 * 4 + 4 #n = number of instruments except this
 
 
-i 802f9000:	#cos
-#f8 = in-value
-stwu r8, -4(sp)
-stwu r6, -4(sp)
-fabs r8,r8			#r8 = |r8|
-lis r8, 0x4140		#r8 = 12.0
-stw r8,0x14(r6)
-lfs f5,0x14(r6)		#f5 = 12.0
-fdivs f5,f8,f5		#f5 = x/12
 
-lis r8, 0x3f00		#r8 = .5
-stw r8,0x14(r6)
-lfs f6,0x14(r6)		#f6 = .5
-fsubs f5,f5,f6		#f5 = x/12-1/2
-fmuls f8,f8,f8		#f8 = x^2
-fmuls f8,f8,f5		#f8 = x^2(x/12-1/2)
 
-lis r8, 0x3f80		#r8 = 1.0
-stw r8,0x14(r6)
-lfs f6,0x14(r6)		#f6 = 1.0
-fadds f8,f8,f6		#f8 = x^2(x/12-1/2)+1
-lwzu r6,0(sp)
-lwzu r8,4(sp)
-addi sp,sp,4
-blr
+in 802f9000: #cos
+# f8 = in-value
+stwu r8, -4 (sp)
+stwu r6, -4 (sp)
+fabs r8, r8 # r8 = | r8 |
+lis r8, 0x4140 # r8 = 12.0
+stw r8.0x14 (r6)
+lfs f5,0x14 (r6) # f5 = 12.0
+fdivs f5, f8, f5 # f5 = x / 12
 
-i 802f90c0:	#sin, experimented to x-x^3/8 = x(1-x^2/8), -pi to pi
-#f8 = in-value
-stwu r8, -4(sp)
-stwu r6, -4(sp)
-lis r8, 0x4100		#r8 = 8.0
-stw r8,0x14(r6)		
-lfs f6,0x14(r6)		#f6 = 8.0
-fmuls f5,f8,f8		#f5 = x^2
-fdivs f5,f5,f6		#f5 = x^2/8
+lis r8, 0x3f00 # r8 = .5
+stw r8.0x14 (r6)
+lfs f6,0x14 (r6) # f6 = .5
+fsubs f5, f5, f6 # f5 = x / 12-1 / 2
+fmuls f8, f8, f8 # f8 = x ^ 2
+fmuls f8, f8, f5 # f8 = x ^ 2 (x / 12-1 / 2)
 
-lis r8, 0x3f80		#r8 = 1.0
-stw r8,0x14(r6)		
-lfs f6,0x14(r6)		#f6 = 1.0
-fsubs f6,f6,f5		#f6 = 1-x^2/8
-fmuls f8,f8,f6		#f8 = x(1-x^2/8)
-lwzu r6,0(sp)
-lwzu r8,4(sp)
-addi sp,sp,4
-blr
+lis r8, 0x3f80 # r8 = 1.0
+stw r8.0x14 (r6)
+lfs f6,0x14 (r6) # f6 = 1.0
+fadds f8, f8, f6 # f8 = x ^ 2 (x / 12-1 / 2) +1
+lwzu r6.0 (sp)
+lwzu r8.4 (sp)
+addi sp, sp, 4
+BLR
+
+in 802f90c0: #sin, experimented to x-x ^ 3/8 = x (1-x ^ 2/8), -pi to pi
+# f8 = in-value
+stwu r8, -4 (sp)
+stwu r6, -4 (sp)
+lis r8, 0x4100 # r8 = 8.0
+stw r8.0x14 (r6)
+lfs f6,0x14 (r6) # f6 = 8.0
+fmuls f5, f8, f8 # f5 = x ^ 2
+fdivs f5, f5, f6 # f5 = x ^ 2/8
+
+lis r8, 0x3f80 # r8 = 1.0
+stw r8.0x14 (r6)
+lfs f6,0x14 (r6) # f6 = 1.0
+fsubs f6, f6, f5 # f6 = 1-x ^ 2/8
+fmuls f8, f8, f6 # f8 = x (1-x ^ 2/8)
+lwzu r6.0 (sp)
+lwzu r8.4 (sp)
+addi sp, sp, 4
+BLR
 
 
 
 
 TODO:
-X	!!!!!!!fixa x/0-felet!!!!!!!
-	NTSC
-/	fixa bugg så man inte kan skjuta genom väggar!
-	fixa så att 802f6900 eller 04 nollas om det ej är en goomba eller den är död
-	hitta bättre minnesplatser etc
-	fixa två olika portaler med olika färger
-	portaler ska ha en timeout, utifall man skjuter ut i tomma intet
-	fixa bugg så man inte kan skjuta igenom väggar när man står nära dem
-X	fixa så man kan ta med sig saker genom portalen
-X	måste fixa så att man dör av alla andra än bobomb
-X	bobomb får inte interagera med andra fiender!
-/	bobomb måste vara odödlig!
-	måste trycka på A/B för att lägga portalerna!
-/	fixa sikte, kanske goombas som ligger i en linje?? typ göra dom svarta också
-/	fixa så att siktet utgår ifrån där skottet kommer ifrån, alt. flytta skottets utgångspunkt
-X	_fixa orientation på portalerna_
-X	fixa så att hastigheterna blir speglade när portalerna har samma orientation
-	(fixa så att hastigheterna även får en min-gräns)
-	portalerna ska inte kunna skjutas överallt
-/	(lär mig blr, bl etc)
-X	fixa speglad cos kring origo
-X	flytta ut skottet en bit när det skjutits, alt. _inaktivera portalen en kort stund_
-/	grafik!
-	banor!
-	companion cube?
-	(något slags spegel som portalskottet studsar på?)
+X !!!!!!! fix x / 0 error !!!!!!!
+NTSC
+/ fix bug so you can't shoot through walls!
+fix so that 802f6900 or 04 is zeroed if it is not a goomba or it is dead
+find better memory locations etc
+fix two different portals with different colors
+portals should have a timeout, in case one shoots out in empty nothing
+fix bug so you can't push through walls when standing near them
+X fix so you can take things through the portal
+X must fix so that you die by anyone other than bobomb
+X bobomb must not interact with other enemies!
+/ bobomb must be immortal!
+must press A / B to add the portals!
+/ fix aim, maybe goombas lying in a line ?? kind of make them black too
+/ fix so that the aim is from where the shot comes from, alt. move the starting point of the shot
+X _ fix orientation on the portals_
+X fix so that the speeds are reflected when the portals have the same orientation
+(fix so that the speeds also get a min-limit)
+the portals should not be able to be pushed anywhere
+/ (teach me blr, bl etc)
+X fix mirrored cos around origo
+X move out the shot a bit when shot, alt. _ disable the portal for a short time_
+/ Graphics!
+courses!
+companion cube?
+(some kind of mirror that the portal shot bounces on?)
 
-adresser:
-802f6900	portal 1
-802f6904	portal 2
-802f6908	aktiv portal
-802f6914	mellanlagra saker till lfs etc
-802f6918	mellanlagra saker till lfs etc
-802f691c	tot antal portaler lagda
-802f6930	mini-goomba	
-802f6934	mini-goomba
-802f6938	mini-goomba
+addresses:
+802f6900 portal 1
+802f6904 portal 2
+802f6908 active portal
+802f6914 middle storage stuff for lfs etc
+802f6918 middle storage stuff for lfs etc
+802f691c to number of portals laid
+802f6930 mini goomba
+802f6934 mini goomba
+802f6938 mini goomba
 802f6940
 
 
 
-802f6960	wiimote-tilt -pi/2 -> pi/2
+802f6960 wiimote-tilt -pi / 2 -> pi / 2
 
-802f6970	sin(wiimote)	uppdateras
-802f6974	cos(wiimote)	uppdateras
+802f6970 its (Wiimote) is updated
+802f6974 cos (Wiimote) is updated
 
-802f6980	sin(wiimote)	läggs in när ett skott avfyras
-802f6984	cos(wiimote)	-||-
+802f6980 sin (wiimote) is inserted when a shot is fired
+802f6984 cos (wiimote) - || -
 
 bobomb:
-+0x300		orientation, 1 höger, 2 upp, 3 vänster, 4 ner
++ 0x300 orientation, 1 right, 2 up, 3 left, 4 down
 
 
 
-hoppa till 80095bd4 om det är en bobomb etc (skip collision)
-r28 är en av de som krockat, r31 är den andra
+jump to 80095bd4 if it's a bobomb etc (skip collision)
+r28 is one of those that crashed, r31 is the other
 
-i 80095980:
+in 80095980:
 b (0x802f9000-0x80095980)
 
 i 802f9000:
-stwu r5, -4(sp)
-stwu r6, -4(sp)
-stwu r7, -4(sp)
+stwu r5, -4 (sp)
+stwu r6, -4 (sp)
+stwu r7, -4 (sp)
 
 .check_if_bobomb28:
-lhz r5, 8(r28)	#r5 = 0x85 om bobomb
+lhz r5, 8 (r28) # r5 = 0x85 about bobomb
 cmpwi r5, 0x85
-beq .skip_collision
+beq .ship_collision
 
 .check_if_bobomb31:
-lhz r5, 8(r31)			#r5 = 0x85 om bobomb
-cmpwi r5, 0x85			
-beq .skip_collision
+lhz r5, 8 (r31) # r5 = 0x85 about bobomb
+cmpwi r5, 0x85
+beq .ship_collision
 
 .check_if_microgoomba28:
-lhz r5, 8(r28)	#r5 = 0x124 om bobomb
+lhz r5, 8 (r28) # r5 = 0x124 about bobomb
 cmpwi r5, 0x124
-beq .skip_collision
+beq .ship_collision
 
 .check_if_microgoomba31:
-lhz r5, 8(r31)			#r5 = 0x124 om bobomb
-cmpwi r5, 0x124			
-beq .skip_collision
+lhz r5, 8 (r31) # r5 = 0x124 about bobomb
+cmpwi r5, 0x124
+beq .ship_collision
 
 
 .exit:
-lwzu r7,0(sp)
-lwzu r6,4(sp)
-lwzu r5,4(sp)
-addi sp,sp,4
-cmpwi r0,0		#ORIGVÄRDE!
-b -(0x802f9000-0x80095980)-n*4+4 	#n = antalet instr förutom denna 
+lwzu r7.0 (sp)
+lwzu r6.4 (sp)
+lwzu r5.4 (sp)
+addi sp, sp, 4
+cmpwi r0,0 # PRINCIPLE!
+b - (0x802f9000-0x80095980) -n * 4 + 4 #n = number of instruments except this
 
-.skip_collision: 	#jump to the end, don't care about collisions etc
-lwzu r7,0(sp)
-lwzu r6,4(sp)
-lwzu r5,4(sp)
-addi sp,sp,4
-cmpwi r0,0		#ORIGVÄRDE!
-b -(0x802f9000-0x80095980)-n*4+(0x80095bd4-0x80095980)-6*4
+.ship_collision: #jump to the end, don't care about collisions etc
+lwzu r7.0 (sp)
+lwzu r6.4 (sp)
+lwzu r5.4 (sp)
+addi sp, sp, 4
+cmpwi r0,0 # PRINCIPLE!
+b - (0x802f9000-0x80095980) -n * 4 + (0x80095bd4-0x80095980) -6 * 4
 
-0x80926770	world map draw func
+0x80926770 world map draw func
 
 (((((((((
 
-<memory offset="0x80162b00" value="48193910" />
-<memory offset="0x802f6410" value="2C0300684082001C3E4081546252BA7B8A5200002C12000040820008386000852C0400004BE6C6D0" />
+<memory offset = "0x80162b00" value = "48193910" />
+<memory offset = "0x802f6410" value = "2C0300684082001C3E4081546252BA7B8A5200002C12000040820008386000852C0400004BE6C6D0" />
 
-<memory offset="0x80064350" value="482920F0" />
-<memory offset="0x802f6440" value="9421FFF094A1FFFC94C1FFFC94E1FFFC9501FFFC80A300086CA701242C070000418201343CC0802F60C666006CA500852C050000408200FC80A600082C050000418201082C0500024182004880A600042C0500004182003080E600042C070000418200D0A0A700082C05008540820018A0A7000A2C0500024182000C38A0000090A7012438A00002906600044800004480A600002C0500004182003080E600002C0700004182008CA0A700082C05008540820018A0A7000A2C0500024182000C38A0000090A7012438A000019066000090A60008810600742C08000041820054810600702C080000418200482C070000418200403CA0815460A5B90480A500002C0530004182001CC1060074FD004050D1060084C1060070D106008048000014C1060074D1060084C1060070D10600808501000084E1000484C1000484A10004382100044BD6DDD038A0000190A600084BFFFFE03CC0802F60C6663080E600002C07000040820014906600004800001C906600084800001480E600042C0700004082FFF0906600044BFFFE9C" />
+<memory offset = "0x80064350" value = "482920F0" />
+<Memory Offset = "0x802f6440" value = "9421FFF094A1FFFC94C1FFFC94E1FFFC9501FFFC80A300086CA701242C070000418201343CC0802F60C666006CA500852C050000408200FC80A600082C050000418201082C0500024182004880A600042C0500004182003080E600042C070000418200D0A0A700082C05008540820018A0A7000A2C0500024182000C38A0000090A7012438A00002906600044800004480A600002C0500004182003080E600002C0700004182008CA0A700082C05008540820018A0A7000A2C0500024182000C38A0000090A7012438A000019066000090A60008810600742C08000041820054810600702C080000418200482C070000418200403CA0815460A5B90480A500002C0530004182001CC1060074FD004050D1060084C1060070D106008048000014C1060074D1060084C1060070D10600808501000084E1000484C1000484A10004382100044BD6DDD038A0000190A600084BFFFFE03CC0802F60C6663080E600002C07000040820014906600004800001C906600084800001480E600042C0700004082FFF0906600044BFFFE9C" />
 
-<memory offset="0x80095950" value="48263010" />
-<memory offset="0x802f8960" value="9421FFE094A1FFFC94C1FFFC94E1FFFC9501FFFC9781FFFC9461FFFC8384000480630004A0BC00082C050124418201FCA0A300082C050124418201F03CA0802F60A5660080C500007CE330502C0700004182001C80C500047CE330502C070000408201C880C500004800000880C50004810500202C080014418001B03900000091050020C0BC00E8C0DC00ECECE50172ED0601B2ECE7402AD0E50018810500182C08000041820008FCE03834ECA501F2ECC601F23D0041209105000CC105000CECA50232ECC60232C0E600AC3D0040A09105000CC105000CECA50232D0FC00ACC0E600B0D0FC00B080C5000080E500042C060000418201342C0700004182012CA10600082C08008540820120A10700082C08008540820114A106000A2C08000241820108A107000A2C080002418200FC8106030080A703007CA828502C050000408200542C0800014182002C2C08000341820024C11C00ECFD004050D11C00ECFCC03050C11C00B0ED08302AD11C00B0480000B8C11C010CFD004050D11C010CFCA02850C11C00ACED08302AD11C00AC480000988106030080A703007CA828502C050002418200842C05FFFE4182007C8106030080A703007CA828502C050001418200102C05FFFF41820008480000488106030080A703002C080004418200242C0500044182001C8106030080A703002C080003418200202C05000341820018C11C010CC0DC00ECD11C00ECD0DC010C48000018C11C010CC0DC00ECFCC03050D11C00ECD0DC010C84610000878100048501000484E1000484C1000484A10004382100044BD9CDB0" />
+<memory offset = "0x80095950" value = "48263010" />
+<Memory Offset = "0x802f8960" value = "9421FFE094A1FFFC94C1FFFC94E1FFFC9501FFFC9781FFFC9461FFFC8384000480630004A0BC00082C050124418201FCA0A300082C050124418201F03CA0802F60A5660080C500007CE330502C0700004182001C80C500047CE330502C070000408201C880C500004800000880C50004810500202C080014418001B03900000091050020C0BC00E8C0DC00ECECE50172ED0601B2ECE7402AD0E50018810500182C08000041820008FCE03834ECA501F2ECC601F23D0041209105000CC105000CECA50232ECC60232C0E600AC3D0040A09105000CC105000CECA50232D0FC00ACC0E600B0D0FC00B080C5000080E500042C060000418201342C0700004182012CA10600082C08008540820120A10700082C08008540820114A106000A2C08000241820108A107000A2C080002418200FC8106030080A703007CA828502C050000408200542C0800014182002C2C08000341820024C11C00ECFD004050D11C00ECFCC03050C11C00B0ED08302AD11C00B0480000B8C11C010CFD004050D11C010CFCA02850C11C00ACED08302AD11C00AC480000988106030080A703007CA828502C050002418200842C05FFFE4182007C8106030080A703007CA828502C050001418200102C05FFFF41820008480000488106030080A703002C080004418200242C050 0044182001C8106030080A703002C080003418200202C05000341820018C11C010CC0DC00ECD11C00ECD0DC010C48000018C11C010CC0DC00ECFCC03050D11C00ECD0DC010C84610000478100048501484004D40104004A4E4D40104004A4484A4E4D4004A4E4D40104484004A4E4D4004A4E4D40104484014484484004A4E4D4004A4484A4484A4E4D4004E4
 
-<!-- skip collision if one is bobomb -->
-<memory offset="0x80095980" value="48263680" />
-<memory offset="0x802f9000" value="94A1FFFC94C1FFFC94E1FFFCA0BC00082C05008541820040A0BF00082C05008541820034A0BC00082C05012441820028A0BF00082C0501244182001C84E1000084C1000484A10004382100042C0000004BD9C93484E1000084C1000484A10004382100042C0000004BD9CB6C" />
+<! - skip collision if one is bobomb ->
+<memory offset = "0x80095980" value = "48263680" />
+<Memory Offset = "0x802f9000" value = "94A1FFFC94C1FFFC94E1FFFCA0BC00082C05008541820040A0BF00082C05008541820034A0BC00082C05012441820028A0BF00082C0501244182001C84E1000084C1000484A10004382100042C0000004BD9C93484E1000084C1000484A10004382100042C0000004BD9CB6C" />
 
-<memory offset="0x800e39e4" value="482151D4" />
-<memory offset="0x802f8bb8" value="881F000A94A1FFFC94C1FFFC94E1FFFC9501FFFC480002043CC0802F60C6660081060020390800019106002080E600082C0700024182000C80E600004800000880E600042C070000418200C880A700086CA5008574A5FFFF2C050000408200B480A702742C0500004182008480A600002C0500004182009CA105000A2C0800024182009039000000910500F8910500E8910500EC80A600042C05000041820074A105000A2C0800024182006839000000910500F8910500E8910500ECA0A7027C2C0500014182006480A702742C050014418200702C050028418200A87CA5C6702C0500044800007C48000028C10600803D0040A09106000CC0A6000CED080172D10700ECC1060084ED080172D10700E88501000084E1000484C1000484A10004382100044BDEAD0C39000004910703008107010075080000910701004BFFFFD439000003910703008107010075080000610840006508C000910701004BFFFFB4390000029107030081070100750800006508800061088000910701004BFFFF94390000019107030081070100750800006508C0006108C000910701004BFFFF7439000000910700004BFFFF68FD0042103D00414091060014C0A60014ECA828243D003F0091060014C0C60014ECA53028ED080232ED0801723D003F8091060014C0C60014ED08302A4E8000203D00410091060014C0C60014ECA80232ECA530243D003F8091060014C0C60014ECC62828ED0801B24E8000203CC0802F60C666003D008076610812C8C10800003D003FC991060014C0A60014ED080172D106006080A600302C050000418200C03CE0815460E7B8047C0803A64BFFFF55810701007D0866702C08000D41820028D10600743D0041F091060014C0E60014ECE801F2C0A700ACECA5382AD0A500AC48000024D10600743D0041F091060014C0E60014ECE801F2C0A700ACECA53828D0A500ACC1060060810701007D0866702C0800034182000CFD004050600000007C0803A64BFFFF1DD10600703D0041F091060014C0E60014ECE801F2C0A700B0ECE7282A3D00417091060014C0A60014ECE7282AD0E500B04BFFFD144BFFFD10" />
+<memory offset = "0x800e39e4" value = "482151D4" />
+<Memory Offset = "0x802f8bb8" value = "881F000A94A1FFFC94C1FFFC94E1FFFC9501FFFC480002043CC0802F60C6660081060020390800019106002080E600082C0700024182000C80E600004800000880E600042C070000418200C880A700086CA5008574A5FFFF2C050000408200B480A702742C0500004182008480A600002C0500004182009CA105000A2C0800024182009039000000910500F8910500E8910500EC80A600042C05000041820074A105000A2C0800024182006839000000910500F8910500E8910500ECA0A7027C2C0500014182006480A702742C050014418200702C050028418200A87CA5C6702C0500044800007C48000028C10600803D0040A09106000CC0A6000CED080172D10700ECC1060084ED080172D10700E88501000084E1000484C1000484A10004382100044BDEAD0C39000004910703008107010075080000910701004BFFFFD439000003910703008107010075080000610840006508C000910701004BFFFFB4390000029107030081070100750800006508800061088000910701004BFFFF94390000019107030081070100750800006508C0006108C000910701004BFFFF7439000000910700004BFFFF68FD0042103D00414091060014C0A60014ECA828243D003F0091060014C0C60014ECA53028ED080232ED0801723D003F8091060014C0C60 014ED08302A4E8000203D00410091060014C0C60014ECA80232ECA530243D003F8091060014C0C60014ECC62828ED0801B24E8000203CC0802F60C666003D008076610812C8C10800003D003FC991060014C0A60014ED080172D106006080A600302C050000418200C03CE0815460E7B8047C0803A64BFFFF55810701007D0866702C08000D41820028D10600743D0041F091060014C0E60014ECE801F2C0A700ACECA5382AD0A500AC48000024D10600743D0041F091060014C0E60014ECE801F2C0A700ACECA53828D0A500ACC1060060810701007D0866702C0800034182000CFD004050600000007C0803A64BFFFF1DD10600703D0041F091060014C0E60014ECE801F2C0A700B0ECE7282A3D00417091060014C0A60014ECE7282AD0E500B04BFFFD144BFFFD10 "/>
 
 )))))))))
 
 
 
 
-bra adresser?
-8035a100 - 8035df00 ~ 4000 words! fungerar säkert ej...
+good addresses?
+8035a100 - 8035df00 ~ 4000 words! certainly does not work ...
 
 
 
@@ -1084,19 +1083,15 @@ bra adresser?
 803e4bfc doesn't work on the wii (I think)
 try 802f9000 instead
 
-#802f8d1c	sub etc, breakpoint
+# 802f8d1c sub etc, breakpoint
 
-#kamera!!
+#camera!!
 815e732c
 815e731c
 
-80d25d5c	nåt med kamera, kolla var den ändras!
+80d25d5c something with camera, check where it changes!
 
 
-hoppa till 80095bd4 vid 80095980 kanske?
+jump to 80095bd4 at 80095980 maybe?
 => b (0x80095bd4-0x80095980) =>
-<memory offset="0x80095980" value="48000254" />
-
-
-
-
+<memory offset = "0x80095980" value = "48000254" />
